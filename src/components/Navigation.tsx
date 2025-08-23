@@ -15,11 +15,11 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { label: "Services", href: "#services" },
-    { label: "About", href: "#about" },
-    { label: "Portfolio", href: "#portfolio" },
-    { label: "Blog", href: "#blog" },
-    { label: "Contact", href: "#contact" }
+    { label: "Services", href: "/services" },
+    { label: "About", href: "/about" },
+    { label: "Portfolio", href: "/portfolio" },
+    { label: "Blog", href: "/blog" },
+    { label: "Contact", href: "/contact" }
   ];
 
   return (
@@ -54,9 +54,6 @@ const Navigation = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="ghost" size="sm">
-              Login
-            </Button>
             <Button variant="hero" size="sm">
               Get Started
             </Button>
@@ -88,9 +85,6 @@ const Navigation = () => {
                 </a>
               ))}
               <div className="flex flex-col gap-3 px-4 pt-4 border-t border-border/50">
-                <Button variant="ghost" size="sm" className="justify-start">
-                  Login
-                </Button>
                 <Button variant="hero" size="sm">
                   Get Started
                 </Button>

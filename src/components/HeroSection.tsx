@@ -27,18 +27,18 @@ const HeroSection = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
-        <div className="space-y-8">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center pt-20">
+        <div className="space-y-8 animate-fade-in">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted/50 border border-primary/20 backdrop-blur-sm">
-            <Sparkles className="w-4 h-4 text-primary" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted/50 border border-primary/20 backdrop-blur-sm animate-scale-in" style={{ animationDelay: '0.2s' }}>
+            <Sparkles className="w-4 h-4 text-primary animate-pulse" />
             <span className="text-sm font-medium text-muted-foreground">
               AI-Powered Digital Solutions
             </span>
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight animate-fade-in" style={{ animationDelay: '0.4s' }}>
             We Build{" "}
             <span className="text-gradient animate-pulse-glow">
               Smart Websites
@@ -47,7 +47,7 @@ const HeroSection = () => {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: '0.6s' }}>
             From websites to intelligent automation — we deliver end-to-end digital solutions 
             that{" "}
             <span className="text-primary font-semibold">grow businesses</span> and{" "}
@@ -55,11 +55,12 @@ const HeroSection = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8 animate-fade-in" style={{ animationDelay: '0.8s' }}>
             <Button 
               variant="hero" 
               size="xl" 
-              className="group"
+              className="group hover:scale-105 transition-smooth"
+              onClick={() => window.open('https://calendly.com/your-calendly-link', '_blank')}
             >
               Book Free Consultation
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -68,7 +69,7 @@ const HeroSection = () => {
             <Button 
               variant="ghost-glow" 
               size="xl"
-              className="group"
+              className="group hover:scale-105 transition-smooth"
             >
               Get a Quote
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -76,21 +77,21 @@ const HeroSection = () => {
           </div>
 
           {/* Trust Indicators */}
-          <div className="pt-12">
+          <div className="pt-12 animate-fade-in" style={{ animationDelay: '1s' }}>
             <p className="text-sm text-muted-foreground mb-6">
               Trusted by 100+ companies worldwide
             </p>
             <div className="flex flex-wrap justify-center gap-8 opacity-60">
-              <div className="px-6 py-3 rounded-lg bg-muted/30 border border-border/50 text-sm font-medium">
+              <div className="px-6 py-3 rounded-lg bg-muted/30 border border-border/50 text-sm font-medium hover:opacity-100 hover:scale-105 transition-smooth">
                 SaaS Platforms
               </div>
-              <div className="px-6 py-3 rounded-lg bg-muted/30 border border-border/50 text-sm font-medium">
+              <div className="px-6 py-3 rounded-lg bg-muted/30 border border-border/50 text-sm font-medium hover:opacity-100 hover:scale-105 transition-smooth" style={{ animationDelay: '0.1s' }}>
                 E-commerce
               </div>
-              <div className="px-6 py-3 rounded-lg bg-muted/30 border border-border/50 text-sm font-medium">
+              <div className="px-6 py-3 rounded-lg bg-muted/30 border border-border/50 text-sm font-medium hover:opacity-100 hover:scale-105 transition-smooth" style={{ animationDelay: '0.2s' }}>
                 Enterprise
               </div>
-              <div className="px-6 py-3 rounded-lg bg-muted/30 border border-border/50 text-sm font-medium">
+              <div className="px-6 py-3 rounded-lg bg-muted/30 border border-border/50 text-sm font-medium hover:opacity-100 hover:scale-105 transition-smooth" style={{ animationDelay: '0.3s' }}>
                 Startups
               </div>
             </div>
