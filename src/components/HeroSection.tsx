@@ -1,0 +1,104 @@
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Sparkles, Code2, Bot } from "lucide-react";
+import heroImage from "@/assets/hero-tech.jpg";
+
+const HeroSection = () => {
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src={heroImage} 
+          alt="Futuristic tech visualization" 
+          className="w-full h-full object-cover opacity-30"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/70 to-background/90" />
+      </div>
+
+      {/* Floating Elements */}
+      <div className="absolute top-20 left-20 animate-float">
+        <Code2 className="w-8 h-8 text-primary opacity-60" />
+      </div>
+      <div className="absolute top-40 right-32 animate-float" style={{ animationDelay: '1s' }}>
+        <Bot className="w-10 h-10 text-secondary opacity-60" />
+      </div>
+      <div className="absolute bottom-40 left-32 animate-float" style={{ animationDelay: '2s' }}>
+        <Sparkles className="w-6 h-6 text-accent opacity-60" />
+      </div>
+
+      {/* Main Content */}
+      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
+        <div className="space-y-8">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted/50 border border-primary/20 backdrop-blur-sm">
+            <Sparkles className="w-4 h-4 text-primary" />
+            <span className="text-sm font-medium text-muted-foreground">
+              AI-Powered Digital Solutions
+            </span>
+          </div>
+
+          {/* Main Headline */}
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
+            We Build{" "}
+            <span className="text-gradient animate-pulse-glow">
+              Smart Websites
+            </span>{" "}
+            & AI-Powered Solutions
+          </h1>
+
+          {/* Subheadline */}
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            From websites to intelligent automation — we deliver end-to-end digital solutions 
+            that{" "}
+            <span className="text-primary font-semibold">grow businesses</span> and{" "}
+            <span className="text-secondary font-semibold">scale operations</span>.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8">
+            <Button 
+              variant="hero" 
+              size="xl" 
+              className="group"
+            >
+              Book Free Consultation
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+            
+            <Button 
+              variant="ghost-glow" 
+              size="xl"
+              className="group"
+            >
+              Get a Quote
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </div>
+
+          {/* Trust Indicators */}
+          <div className="pt-12">
+            <p className="text-sm text-muted-foreground mb-6">
+              Trusted by 100+ companies worldwide
+            </p>
+            <div className="flex flex-wrap justify-center gap-8 opacity-60">
+              <div className="px-6 py-3 rounded-lg bg-muted/30 border border-border/50 text-sm font-medium">
+                SaaS Platforms
+              </div>
+              <div className="px-6 py-3 rounded-lg bg-muted/30 border border-border/50 text-sm font-medium">
+                E-commerce
+              </div>
+              <div className="px-6 py-3 rounded-lg bg-muted/30 border border-border/50 text-sm font-medium">
+                Enterprise
+              </div>
+              <div className="px-6 py-3 rounded-lg bg-muted/30 border border-border/50 text-sm font-medium">
+                Startups
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;
