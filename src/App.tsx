@@ -11,6 +11,10 @@ import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
+import AIAutomationCaseStudy from "./pages/blog/ai-automation-case-study";
+import WebDevelopmentTrends2024 from "./pages/blog/web-development-trends-2024";
+import BusinessProcessAutomationGuide from "./pages/blog/business-process-automation-guide";
+import EcommerceConversionCaseStudy from "./pages/blog/ecommerce-conversion-case-study";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +32,10 @@ const App = () => (
             <Route path="/about" element={<About />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/ai-automation-case-study" element={<AIAutomationCaseStudy />} />
+            <Route path="/blog/web-development-trends-2024" element={<WebDevelopmentTrends2024 />} />
+            <Route path="/blog/business-process-automation-guide" element={<BusinessProcessAutomationGuide />} />
+            <Route path="/blog/ecommerce-conversion-case-study" element={<EcommerceConversionCaseStudy />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
