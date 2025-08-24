@@ -37,11 +37,11 @@ const Footer = () => {
     {
       title: "Resources",
       links: [
-        "Documentation",
         "Support",
         "FAQ",
-        "API Reference",
-        "Status"
+        "Help Center",
+        "Tutorials",
+        "Community"
       ]
     },
     {
@@ -49,7 +49,6 @@ const Footer = () => {
       links: [
         "Privacy Policy",
         "Terms of Service",
-        "Cookie Policy",
         "GDPR",
         "Accessibility"
       ]
@@ -173,10 +172,9 @@ const Footer = () => {
               <span className="text-xs text-muted-foreground">
                 Built with ❤️ and cutting-edge tech
               </span>
-              <div className="flex gap-4 text-xs text-muted-foreground">
-                <a href="#" className="hover:text-primary transition-smooth">Privacy</a>
-                <a href="#" className="hover:text-primary transition-smooth">Terms</a>
-                <a href="#" className="hover:text-primary transition-smooth">Cookies</a>
+              <div className="flex items-center gap-6 text-xs text-muted-foreground">
+                <a href="/privacy" className="hover:text-primary transition-smooth">Privacy</a>
+                <a href="/terms" className="hover:text-primary transition-smooth">Terms</a>
               </div>
             </div>
           </div>

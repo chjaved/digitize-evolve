@@ -2,6 +2,8 @@ import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
 import AboutSection from "@/components/AboutSection";
+import PricingSection from "@/components/PricingSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -22,8 +24,18 @@ const Index = () => {
         <AboutSection />
       </div>
       
+      {/* Pricing Section */}
+      <div className="animate-slide-up" style={{ animationDelay: '0.3s' }}>
+        <PricingSection />
+      </div>
+      
+      {/* Testimonials Section */}
+      <div className="animate-slide-up" style={{ animationDelay: '0.4s' }}>
+        <TestimonialsSection />
+      </div>
+      
       {/* CTA Section */}
-      <section className="py-24 px-6 max-w-4xl mx-auto text-center animate-fade-in" style={{ animationDelay: '0.4s' }}>
+      <section className="py-24 px-6 max-w-4xl mx-auto text-center animate-fade-in" style={{ animationDelay: '0.5s' }}>
         <h2 className="text-4xl font-bold mb-6">
           Ready to Transform Your Business?
         </h2>
