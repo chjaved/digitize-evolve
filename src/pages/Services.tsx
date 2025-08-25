@@ -106,7 +106,7 @@ const Services = () => {
             ))}
           </div>
           <blockquote className="text-2xl font-medium mb-6 text-muted-foreground italic">
-            "DigitalizeEvolve transformed our business with their AI automation solutions. 
+            "SkyEx Technologies transformed our business with their AI automation solutions. 
             We've seen a 300% increase in efficiency and our customers love the new chatbot!"
           </blockquote>
           <cite className="text-lg font-semibold">

@@ -18,7 +18,7 @@ const Terms = () => {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4 text-primary">1. Acceptance of Terms</h2>
             <p className="text-muted-foreground">
-              By accessing and using DigitalizeEvolve's services, you accept and agree to be bound by the terms 
+              By accessing and using SkyEx Technologies's services, you accept and agree to be bound by the terms 
               and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
             </p>
           </section>
@@ -26,7 +26,7 @@ const Terms = () => {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4 text-primary">2. Services Description</h2>
             <p className="text-muted-foreground mb-4">
-              DigitalizeEvolve provides:
+              SkyEx Technologies provides:
             </p>
             <ul className="text-muted-foreground space-y-2 ml-6">
               <li>• Web development and design services</li>
@@ -48,7 +48,7 @@ const Terms = () => {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4 text-primary">4. Intellectual Property</h2>
             <p className="text-muted-foreground">
-              Upon full payment, clients will own the final deliverables. However, DigitalizeEvolve retains the right 
+              Upon full payment, clients will own the final deliverables. However, SkyEx Technologies retains the right 
               to use general methodologies, techniques, and know-how developed during the project for future work.
             </p>
           </section>
@@ -56,7 +56,7 @@ const Terms = () => {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4 text-primary">5. Limitation of Liability</h2>
             <p className="text-muted-foreground">
-              DigitalizeEvolve shall not be liable for any indirect, incidental, special, consequential, or punitive damages, 
+              SkyEx Technologies shall not be liable for any indirect, incidental, special, consequential, or punitive damages, 
               including without limitation, loss of profits, data, use, goodwill, or other intangible losses.
             </p>
           </section>

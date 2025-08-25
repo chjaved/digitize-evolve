@@ -7,7 +7,7 @@ const TestimonialsSection = () => {
       name: "Sarah Johnson",
       role: "CEO, TechStartup Inc.",
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face",
-      content: "DigitalizeEvolve transformed our online presence completely. Their AI automation solutions saved us 40+ hours per week, and our new website increased conversions by 250%.",
+      content: "SkyEx Technologies transformed our online presence completely. Their AI automation solutions saved us 40+ hours per week, and our new website increased conversions by 250%.",
       rating: 5
     },
     {
