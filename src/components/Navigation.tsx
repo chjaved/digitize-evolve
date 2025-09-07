@@ -19,7 +19,8 @@ const Navigation = () => {
     { label: "About", href: "/about" },
     { label: "Portfolio", href: "/portfolio" },
     { label: "Blog", href: "/blog" },
-    { label: "Contact", href: "/contact" }
+    { label: "Contact", href: "/contact" },
+    { label: "FAQ", href: "/faq" }
   ];
 
   return (
@@ -32,10 +33,12 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-primary flex items-center justify-center">
-              <Zap className="w-5 h-5 text-primary-foreground" />
-            </div>
-            <span className="text-xl font-bold text-gradient">SkyEx Technologies</span>
+            <a href="/" className="flex items-center gap-2">
+              <div className="w-8 h-8 rounded-lg bg-gradient-primary flex items-center justify-center">
+                <Zap className="w-5 h-5 text-primary-foreground" />
+              </div>
+              <span className="text-xl font-bold text-gradient">SkyEx Technologies</span>
+            </a>
           </div>
 
           {/* Desktop Navigation */}
@@ -54,7 +57,11 @@ const Navigation = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="hero" size="sm">
+            <Button 
+              variant="hero" 
+              size="sm"
+              onClick={() => window.open('https://calendly.com/your-calendly-link', '_blank')}
+            >
               Get Started
             </Button>
           </div>
@@ -85,7 +92,11 @@ const Navigation = () => {
                 </a>
               ))}
               <div className="flex flex-col gap-3 px-4 pt-4 border-t border-border/50">
-                <Button variant="hero" size="sm">
+                <Button 
+                  variant="hero" 
+                  size="sm"
+                  onClick={() => window.open('https://calendly.com/your-calendly-link', '_blank')}
+                >
                   Get Started
                 </Button>
               </div>

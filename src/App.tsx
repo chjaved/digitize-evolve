@@ -15,6 +15,7 @@ import AIAutomationCaseStudy from "./pages/blog/ai-automation-case-study";
 import WebDevelopmentTrends2024 from "./pages/blog/web-development-trends-2024";
 import BusinessProcessAutomationGuide from "./pages/blog/business-process-automation-guide";
 import EcommerceConversionCaseStudy from "./pages/blog/ecommerce-conversion-case-study";
+import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -37,6 +38,7 @@ const App = () => (
             <Route path="/blog/business-process-automation-guide" element={<BusinessProcessAutomationGuide />} />
             <Route path="/blog/ecommerce-conversion-case-study" element={<EcommerceConversionCaseStudy />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/faq" element={<FAQ />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

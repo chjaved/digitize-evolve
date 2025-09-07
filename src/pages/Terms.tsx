@@ -1,86 +1,193 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Shield, Calendar } from "lucide-react";
 
 const Terms = () => {
   return (
     <main className="relative">
       <Navigation />
       
-      <div className="pt-24 pb-16 px-6 max-w-4xl mx-auto">
-        <div className="animate-fade-in">
-          <h1 className="text-4xl font-bold mb-8 text-center">Terms of Service</h1>
-          <p className="text-muted-foreground text-center mb-12 text-lg">
-            Last updated: {new Date().toLocaleDateString()}
+      {/* Hero Section */}
+      <section className="pt-32 pb-16 px-6 bg-gradient-to-br from-background via-background to-muted/20">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted/50 border border-primary/20 backdrop-blur-sm mb-6">
+            <Shield className="w-4 h-4 text-primary animate-pulse" />
+            <span className="text-sm font-medium text-muted-foreground">
+              Legal Information
+            </span>
+          </div>
+          
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            Terms of{" "}
+            <span className="text-gradient">Service</span>
+          </h1>
+          
+          <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+            Please read these terms carefully before using our services.
           </p>
+          
+          <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+            <Calendar className="w-4 h-4" />
+            <span>Last updated: January 2025</span>
+          </div>
         </div>
+      </section>
 
-        <div className="prose prose-lg max-w-none animate-fade-in" style={{ animationDelay: '0.2s' }}>
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4 text-primary">1. Acceptance of Terms</h2>
-            <p className="text-muted-foreground">
-              By accessing and using SkyEx Technologies's services, you accept and agree to be bound by the terms 
-              and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
-            </p>
-          </section>
+      {/* Terms Content */}
+      <section className="py-16 px-6">
+        <div className="max-w-4xl mx-auto space-y-8">
+          
+          <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
+            <CardHeader>
+              <CardTitle>1. Acceptance of Terms</CardTitle>
+            </CardHeader>
+            <CardContent className="prose prose-sm max-w-none">
+              <p className="text-muted-foreground leading-relaxed">
+                By accessing and using SkyEx Technologies services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
+              </p>
+            </CardContent>
+          </Card>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4 text-primary">2. Services Description</h2>
-            <p className="text-muted-foreground mb-4">
-              SkyEx Technologies provides:
-            </p>
-            <ul className="text-muted-foreground space-y-2 ml-6">
-              <li>• Web development and design services</li>
-              <li>• AI automation solutions</li>
-              <li>• Custom software development</li>
-              <li>• Digital consultation services</li>
-              <li>• Technical support and maintenance</li>
-            </ul>
-          </section>
+          <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
+            <CardHeader>
+              <CardTitle>2. Services</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-muted-foreground leading-relaxed">
+                SkyEx Technologies provides web development, AI automation, and digital solutions. Our services include but are not limited to:
+              </p>
+              <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+                <li>Custom website development and design</li>
+                <li>Web application development</li>
+                <li>E-commerce solutions</li>
+                <li>AI automation implementation</li>
+                <li>Digital marketing services</li>
+                <li>Maintenance and support services</li>
+              </ul>
+            </CardContent>
+          </Card>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4 text-primary">3. Payment Terms</h2>
-            <p className="text-muted-foreground">
-              Payment terms will be specified in individual project agreements. Generally, we require a 50% deposit 
-              before beginning work, with the remainder due upon project completion. Late payments may incur additional fees.
-            </p>
-          </section>
+          <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
+            <CardHeader>
+              <CardTitle>3. Payment Terms</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-muted-foreground leading-relaxed">
+                Payment terms are as follows:
+              </p>
+              <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+                <li>50% payment required upfront to commence work</li>
+                <li>Remaining 50% due upon project completion</li>
+                <li>For larger projects, milestone-based payments may be arranged</li>
+                <li>All payments are non-refundable once work has commenced</li>
+                <li>Late payments may incur additional charges</li>
+              </ul>
+            </CardContent>
+          </Card>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4 text-primary">4. Intellectual Property</h2>
-            <p className="text-muted-foreground">
-              Upon full payment, clients will own the final deliverables. However, SkyEx Technologies retains the right 
-              to use general methodologies, techniques, and know-how developed during the project for future work.
-            </p>
-          </section>
+          <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
+            <CardHeader>
+              <CardTitle>4. Project Timeline</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-muted-foreground leading-relaxed">
+                Project timelines are estimates and may vary based on:
+              </p>
+              <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+                <li>Project complexity and scope changes</li>
+                <li>Client feedback and approval times</li>
+                <li>Third-party service dependencies</li>
+                <li>Unforeseen technical challenges</li>
+              </ul>
+            </CardContent>
+          </Card>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4 text-primary">5. Limitation of Liability</h2>
-            <p className="text-muted-foreground">
-              SkyEx Technologies shall not be liable for any indirect, incidental, special, consequential, or punitive damages, 
-              including without limitation, loss of profits, data, use, goodwill, or other intangible losses.
-            </p>
-          </section>
+          <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
+            <CardHeader>
+              <CardTitle>5. Intellectual Property</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-muted-foreground leading-relaxed">
+                Upon full payment, the client will own the custom code and designs created specifically for their project. However:
+              </p>
+              <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+                <li>SkyEx Technologies retains rights to reusable components and methodologies</li>
+                <li>Third-party licenses remain with their respective owners</li>
+                <li>The client is responsible for renewing any third-party licenses</li>
+              </ul>
+            </CardContent>
+          </Card>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4 text-primary">6. Termination</h2>
-            <p className="text-muted-foreground">
-              Either party may terminate services with written notice. Upon termination, payment for work completed 
-              up to the termination date will be due, and any materials developed will be provided to the client.
-            </p>
-          </section>
+          <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
+            <CardHeader>
+              <CardTitle>6. Support and Maintenance</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-muted-foreground leading-relaxed">
+                Support periods are included with each package:
+              </p>
+              <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+                <li>Starter: 1 month of support</li>
+                <li>Professional: 3 months of support</li>
+                <li>Enterprise: 6 months of support</li>
+                <li>Support includes bug fixes and minor updates</li>
+                <li>Extended maintenance plans available separately</li>
+              </ul>
+            </CardContent>
+          </Card>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4 text-primary">7. Contact Information</h2>
-            <p className="text-muted-foreground">
-              For questions regarding these terms, please contact us at:
-              <br />
-              Email: legal@digitalize-evolve.com
-              <br />
-              Phone: +1 (555) 123-4567
-            </p>
-          </section>
+          <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
+            <CardHeader>
+              <CardTitle>7. Limitation of Liability</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground leading-relaxed">
+                SkyEx Technologies' liability is limited to the amount paid for services. We are not liable for any indirect, incidental, or consequential damages. The client is responsible for maintaining backups of their data and content.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
+            <CardHeader>
+              <CardTitle>8. Termination</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground leading-relaxed">
+                Either party may terminate the agreement with written notice. Upon termination, the client will receive all completed work to date, and payment for completed work will be due immediately.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
+            <CardHeader>
+              <CardTitle>9. Changes to Terms</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground leading-relaxed">
+                SkyEx Technologies reserves the right to modify these terms at any time. Clients will be notified of any changes, and continued use of services constitutes acceptance of modified terms.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
+            <CardHeader>
+              <CardTitle>10. Contact Information</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground leading-relaxed">
+                For questions regarding these terms, please contact us at:
+              </p>
+              <div className="mt-4 space-y-2 text-muted-foreground">
+                <p>Email: contact@skyextechnologies.com</p>
+                <p>Phone: +92-344-0669226</p>
+                <p>Address: Islamabad, Pakistan</p>
+              </div>
+            </CardContent>
+          </Card>
+
         </div>
-      </div>
+      </section>
 
       <Footer />
     </main>

@@ -4,9 +4,9 @@ import {
   Mail, 
   Phone, 
   MapPin, 
-  Twitter, 
   Linkedin, 
-  Github,
+  Instagram,
+  MessageCircle,
   ArrowRight
 } from "lucide-react";
 
@@ -47,18 +47,17 @@ const Footer = () => {
     {
       title: "Legal",
       links: [
-        "Privacy Policy",
-        "Terms of Service",
-        "GDPR",
-        "Accessibility"
+        { name: "Privacy Policy", href: "/privacy" },
+        { name: "Terms of Service", href: "/terms" },
+        { name: "FAQ", href: "/faq" }
       ]
     }
   ];
 
   const socialLinks = [
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Github, href: "#", label: "GitHub" }
+    { icon: Linkedin, href: "https://www.linkedin.com/in/javed-jabbar/", label: "LinkedIn" },
+    { icon: MessageCircle, href: "https://wa.link/b6qqva", label: "WhatsApp" },
+    { icon: Instagram, href: "https://www.instagram.com/code._.architects?igsh=OHY4NG5xd2JpdTEy", label: "Instagram" }
   ];
 
   return (
@@ -68,12 +67,12 @@ const Footer = () => {
         <div className="grid lg:grid-cols-6 gap-12">
           {/* Brand & Contact */}
           <div className="lg:col-span-2 space-y-6">
-            <div className="flex items-center gap-2">
+            <a href="/" className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-lg bg-gradient-primary flex items-center justify-center">
                 <Zap className="w-5 h-5 text-primary-foreground" />
               </div>
               <span className="text-xl font-bold text-gradient">SkyEx Technologies</span>
-            </div>
+            </a>
             
             <p className="text-muted-foreground leading-relaxed">
               Transforming businesses with cutting-edge web development and AI automation solutions. 
@@ -83,15 +82,18 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-primary" />
-                <span className="text-sm">hello@digitalize-evolve.com</span>
+                <span className="text-sm">contact@skyextechnologies.com</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-primary" />
-                <span className="text-sm">+1 (555) 123-4567</span>
+                <span className="text-sm">+92-344-0669226</span>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="w-4 h-4 text-primary" />
-                <span className="text-sm">San Francisco, CA</span>
+                <span className="text-sm">Islamabad, Pakistan</span>
+              </div>
+              <div className="text-sm text-muted-foreground">
+                Available 24/7 for your business needs
               </div>
             </div>
 
@@ -105,7 +107,7 @@ const Footer = () => {
                   className="hover:bg-primary/10 hover:text-primary transition-smooth"
                   asChild
                 >
-                  <a href={social.href} aria-label={social.label}>
+                  <a href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label}>
                     <social.icon className="w-4 h-4" />
                   </a>
                 </Button>
@@ -123,10 +125,10 @@ const Footer = () => {
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
                     <a
-                      href="#"
+                      href={typeof link === 'object' ? link.href : "#"}
                       className="text-sm text-muted-foreground hover:text-primary transition-smooth"
                     >
-                      {link}
+                      {typeof link === 'object' ? link.name : link}
                     </a>
                   </li>
                 ))}

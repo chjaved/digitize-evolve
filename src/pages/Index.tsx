@@ -5,6 +5,7 @@ import AboutSection from "@/components/AboutSection";
 import PricingSection from "@/components/PricingSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import Footer from "@/components/Footer";
+import WhatsAppChat from "@/components/WhatsAppChat";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
@@ -59,6 +60,7 @@ const Index = () => {
       </section>
       
       <Footer />
+      <WhatsAppChat />
     </main>
   );
 };

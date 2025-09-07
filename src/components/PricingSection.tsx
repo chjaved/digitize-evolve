@@ -7,15 +7,15 @@ const PricingSection = () => {
     {
       name: "Starter",
       icon: Zap,
-      price: "2,999",
-      description: "Perfect for small businesses and startups",
+      price: "200",
+      description: "Perfect for small businesses looking to establish their digital presence",
       features: [
-        "Custom Website Design",
-        "Responsive Mobile Design",
-        "Basic SEO Optimization",
-        "Contact Forms",
+        "Professional Website Design",
+        "Mobile-Responsive Layout",
+        "SEO Optimization",
+        "Contact Forms Integration",
         "1 Month Support",
-        "Free SSL Certificate"
+        "Basic Analytics Setup"
       ],
       popular: false,
       cta: "Get Started"
@@ -23,16 +23,16 @@ const PricingSection = () => {
     {
       name: "Professional",
       icon: Crown,
-      price: "5,999",
-      description: "Ideal for growing businesses needing advanced features",
+      price: "350",
+      description: "Ideal for growing companies that need advanced functionality",
       features: [
         "Everything in Starter",
-        "E-commerce Integration",
-        "Advanced SEO",
-        "Analytics Dashboard",
-        "AI Chatbot",
+        "Custom Web Application",
+        "Database Integration",
+        "User Authentication System",
+        "Payment Gateway Integration",
+        "Advanced Analytics",
         "3 Months Support",
-        "Social Media Integration",
         "Performance Optimization"
       ],
       popular: true,
@@ -41,20 +41,21 @@ const PricingSection = () => {
     {
       name: "Enterprise",
       icon: Rocket,
-      price: "Custom",
-      description: "Custom solutions for large organizations",
+      price: "499",
+      description: "Comprehensive solution for established businesses seeking cutting-edge technology",
       features: [
         "Everything in Professional",
-        "Custom AI Solutions",
-        "API Integrations",
-        "Advanced Analytics",
-        "Multi-site Management",
-        "24/7 Priority Support",
-        "Custom Development",
-        "Dedicated Account Manager"
+        "AI-Powered Automation",
+        "Custom API Development",
+        "Third-party Integrations",
+        "Advanced Security Features",
+        "Cloud Infrastructure Setup",
+        "6 Months Support",
+        "Dedicated Project Manager",
+        "Training & Documentation"
       ],
       popular: false,
-      cta: "Contact Us"
+      cta: "Scale Up"
     }
   ];
 
@@ -96,14 +97,10 @@ const PricingSection = () => {
               </div>
               <CardTitle className="text-2xl">{plan.name}</CardTitle>
               <div className="mt-4">
-                {plan.price === "Custom" ? (
-                  <span className="text-3xl font-bold">Custom</span>
-                ) : (
-                  <span className="text-4xl font-bold">
-                    ${plan.price}
-                    <span className="text-lg font-normal text-muted-foreground">/project</span>
-                  </span>
-                )}
+                <span className="text-4xl font-bold">
+                  ${plan.price}
+                  <span className="text-lg font-normal text-muted-foreground">/project</span>
+                </span>
               </div>
               <p className="text-muted-foreground mt-2">{plan.description}</p>
             </CardHeader>
@@ -122,13 +119,7 @@ const PricingSection = () => {
                 variant={plan.popular ? "hero" : "outline"} 
                 size="lg" 
                 className="w-full group"
-                onClick={() => {
-                  if (plan.price === "Custom") {
-                    window.open('https://calendly.com/your-calendly-link', '_blank');
-                  } else {
-                    window.open('https://calendly.com/your-calendly-link', '_blank');
-                  }
-                }}
+                onClick={() => window.open('https://calendly.com/your-calendly-link', '_blank')}
               >
                 {plan.cta}
               </Button>
