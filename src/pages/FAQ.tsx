@@ -8,7 +8,7 @@ import { MessageCircle, ArrowRight } from "lucide-react";
 const FAQ = () => {
   const faqs = [
     {
-      question: "What services does SkyEx Technologies offer?",
+      question: "What services does Bitwork offer?",
       answer: "We provide comprehensive web development services including responsive websites, e-commerce platforms, web applications, AI automation solutions, and digital marketing services. Our expertise spans from simple landing pages to complex enterprise solutions."
     },
     {

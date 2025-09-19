@@ -197,7 +197,7 @@ const AIAutomationCaseStudy = () => {
           <section className="mb-12">
             <div className="p-8 rounded-xl bg-muted/30 border border-border/50">
               <blockquote className="text-lg italic text-center mb-6">
-                "The AI automation solutions from SkyEx Technologies completely transformed our operations. 
+                "The AI automation solutions from Bitwork completely transformed our operations. 
                 We're now able to focus on strategic growth instead of drowning in repetitive tasks. 
                 The ROI exceeded our wildest expectations."
               </blockquote>

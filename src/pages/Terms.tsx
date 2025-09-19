@@ -44,7 +44,7 @@ const Terms = () => {
             </CardHeader>
             <CardContent className="prose prose-sm max-w-none">
               <p className="text-muted-foreground leading-relaxed">
-                By accessing and using SkyEx Technologies services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
+                By accessing and using Bitwork Pvt Ltd services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
               </p>
             </CardContent>
           </Card>
@@ -55,7 +55,7 @@ const Terms = () => {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground leading-relaxed">
-                SkyEx Technologies provides web development, AI automation, and digital solutions. Our services include but are not limited to:
+                Bitwork Pvt Ltd provides web development, AI automation, and digital solutions. Our services include but are not limited to:
               </p>
               <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
                 <li>Custom website development and design</li>
@@ -112,7 +112,7 @@ const Terms = () => {
                 Upon full payment, the client will own the custom code and designs created specifically for their project. However:
               </p>
               <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-                <li>SkyEx Technologies retains rights to reusable components and methodologies</li>
+                <li>Bitwork Pvt Ltd retains rights to reusable components and methodologies</li>
                 <li>Third-party licenses remain with their respective owners</li>
                 <li>The client is responsible for renewing any third-party licenses</li>
               </ul>
@@ -143,7 +143,7 @@ const Terms = () => {
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground leading-relaxed">
-                SkyEx Technologies' liability is limited to the amount paid for services. We are not liable for any indirect, incidental, or consequential damages. The client is responsible for maintaining backups of their data and content.
+                Bitwork Pvt Ltd's liability is limited to the amount paid for services. We are not liable for any indirect, incidental, or consequential damages. The client is responsible for maintaining backups of their data and content.
               </p>
             </CardContent>
           </Card>
@@ -165,7 +165,7 @@ const Terms = () => {
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground leading-relaxed">
-                SkyEx Technologies reserves the right to modify these terms at any time. Clients will be notified of any changes, and continued use of services constitutes acceptance of modified terms.
+                Bitwork Pvt Ltd reserves the right to modify these terms at any time. Clients will be notified of any changes, and continued use of services constitutes acceptance of modified terms.
               </p>
             </CardContent>
           </Card>

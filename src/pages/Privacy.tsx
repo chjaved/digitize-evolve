@@ -200,7 +200,7 @@ const Privacy = () => {
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground leading-relaxed">
-                If you have questions about this privacy policy or how we handle your information, please contact us:
+If you have questions about this privacy policy or how we handle your information, please contact us:
               </p>
               <div className="mt-4 space-y-2 text-muted-foreground">
                 <p>Email: contact@skyextechnologies.com</p>
