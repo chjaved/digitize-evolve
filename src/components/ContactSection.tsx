@@ -21,7 +21,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email Us",
-    info: "hello@youragency.com",
+    info: "contact@bitworkpvtltd.com",
     description: "We respond within 2 hours"
   },
   {

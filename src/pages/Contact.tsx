@@ -38,7 +38,7 @@ const contactMethods = [
     title: "Email Us",
     description: "Send us a detailed message about your project requirements.",
     action: "Send Email", 
-    link: "mailto:hello@digitalize-evolve.com",
+    link: "mailto:contact@bitworkpvtltd.com",
     color: "text-accent"
   }
 ];
@@ -191,7 +191,7 @@ const Contact = () => {
                   </div>
                   <p className="text-muted-foreground">
                     For existing clients with critical issues, we offer 24/7 emergency support. 
-                    Contact us at emergency@digitalize-evolve.com
+                    Contact us at contact@bitworkpvtltd.com
                   </p>
                 </CardContent>
               </Card>
