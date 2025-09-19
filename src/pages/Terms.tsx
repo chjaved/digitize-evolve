@@ -179,7 +179,7 @@ const Terms = () => {
                 For questions regarding these terms, please contact us at:
               </p>
               <div className="mt-4 space-y-2 text-muted-foreground">
-                <p>Email: contact@skyextechnologies.com</p>
+                <p>Email: contact@bitworkpvtltd.com</p>
                 <p>Phone: +92-344-0669226</p>
                 <p>Address: Islamabad, Pakistan</p>
               </div>
