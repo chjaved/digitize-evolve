@@ -180,7 +180,7 @@ const Terms = () => {
               </p>
               <div className="mt-4 space-y-2 text-muted-foreground">
                 <p>Email: contact@bitworkpvtltd.com</p>
-                <p>Phone: +92-344-0669226</p>
+                <p>Phone: +92-325-5339295</p>
                 <p>Address: Islamabad, Pakistan</p>
               </div>
             </CardContent>

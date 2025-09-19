@@ -259,7 +259,7 @@ const Contact = () => {
               <Calendar className="ml-2 w-4 h-4" />
             </Button>
             <Button variant="outline" size="lg">
-              Call Now: (555) 123-4567
+              Call Now: +92-325-5339295
             </Button>
           </div>
         </div>

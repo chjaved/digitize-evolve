@@ -27,8 +27,8 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Call Us",
-    info: "+1 (555) 123-4567",
-    description: "Mon-Fri 9AM-6PM EST"
+    info: "+92-325-5339295",
+    description: "Available 24/7 for your business needs"
   },
   {
     icon: MapPin,
