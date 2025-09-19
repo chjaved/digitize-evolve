@@ -33,7 +33,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Visit Us",
-    info: "San Francisco, CA",
+    info: "Islamabad, Pakistan",
     description: "Remote & On-site Available"
   },
   {
