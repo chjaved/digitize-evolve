@@ -86,9 +86,14 @@
       radial-gradient(circle at 80% 20%, hsl(280 100% 70% / 0.1) 0%, transparent 50%);
   }
 
-  html {
-    scroll-behavior: smooth;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+* {
+  scroll-behavior: smooth;
+}
 }
 
 @layer components {

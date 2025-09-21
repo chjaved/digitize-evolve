@@ -7,28 +7,16 @@ import { ArrowRight, Users, Code, Brain, Award } from "lucide-react";
 
 const teamMembers = [
   {
-    name: "Alex Thompson",
-    role: "Founder & CEO",
-    bio: "10+ years in web development and AI. Former tech lead at major Silicon Valley companies.",
+    name: "Sardar Arslan Ali",
+    role: "CEO and Founder",
+    bio: "Visionary leader with extensive experience in technology and business development. Leading the company towards innovative digital solutions.",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face"
   },
   {
-    name: "Sarah Chen", 
-    role: "CTO & AI Specialist",
-    bio: "PhD in Machine Learning. Expert in developing custom AI solutions for businesses.",
-    image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop&crop=face"
-  },
-  {
-    name: "Marcus Rodriguez",
-    role: "Lead Developer",
-    bio: "Full-stack developer with expertise in modern frameworks and scalable architectures.",
+    name: "Javed Jabbar", 
+    role: "Director and Co-Founder",
+    bio: "Strategic business leader with deep expertise in operations and client relations. Driving growth and excellence in service delivery.",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face"
-  },
-  {
-    name: "Emily Davis",
-    role: "Design Director", 
-    bio: "Award-winning designer creating beautiful, user-centered digital experiences.",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face"
   }
 ];
 
