@@ -1,18 +1,22 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, Code2, Bot } from "lucide-react";
-import heroImage from "@/assets/hero-video-bg.jpg";
+import heroImage from "@/assets/hero-tech-bg.jpg";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
+      {/* Background with Tech Animation */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src={heroImage} 
-          alt="Premium technology visualization with AI and automation elements" 
-          className="w-full h-full object-cover opacity-30"
+        <div 
+          className="w-full h-full bg-cover bg-center bg-no-repeat opacity-40"
+          style={{ 
+            backgroundImage: `url(${heroImage})`,
+            backgroundAttachment: 'fixed'
+          }}
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/70 to-background/90" />
+        {/* Animated overlay patterns */}
+        <div className="absolute inset-0 bg-gradient-to-br from-background/85 via-background/70 to-background/85" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(215_100%_60%/0.1),transparent_50%),radial-gradient(circle_at_70%_80%,hsl(280_100%_70%/0.1),transparent_50%)] animate-pulse" />
       </div>
 
       {/* Floating Elements */}
