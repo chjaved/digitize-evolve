@@ -5,46 +5,41 @@ import heroImage from "@/assets/hero-tech-bg.jpg";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background with Tech Animation */}
+      {/* Optimized Background */}
       <div className="absolute inset-0 z-0">
         <div 
-          className="w-full h-full bg-cover bg-center bg-no-repeat opacity-40"
+          className="w-full h-full bg-cover bg-center bg-no-repeat opacity-40 will-change-transform"
           style={{ 
-            backgroundImage: `url(${heroImage})`,
-            backgroundAttachment: 'fixed'
+            backgroundImage: `url(${heroImage})`
           }}
         />
-        {/* Animated overlay patterns */}
+        {/* Simplified overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-background/85 via-background/70 to-background/85" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(215_100%_60%/0.1),transparent_50%),radial-gradient(circle_at_70%_80%,hsl(280_100%_70%/0.1),transparent_50%)] animate-pulse" />
       </div>
 
-      {/* Floating Elements */}
-      <div className="absolute top-20 left-20 animate-float">
-        <Code2 className="w-8 h-8 text-primary opacity-60" />
+      {/* Reduced Floating Elements */}
+      <div className="absolute top-20 left-20 animate-float will-change-transform">
+        <Code2 className="w-8 h-8 text-primary opacity-40" />
       </div>
-      <div className="absolute top-40 right-32 animate-float" style={{ animationDelay: '1s' }}>
-        <Bot className="w-10 h-10 text-secondary opacity-60" />
-      </div>
-      <div className="absolute bottom-40 left-32 animate-float" style={{ animationDelay: '2s' }}>
-        <Sparkles className="w-6 h-6 text-accent opacity-60" />
+      <div className="absolute bottom-40 left-32 animate-float will-change-transform" style={{ animationDelay: '1.5s' }}>
+        <Sparkles className="w-6 h-6 text-accent opacity-40" />
       </div>
 
       {/* Main Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center pt-20">
         <div className="space-y-8 animate-fade-in">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted/50 border border-primary/20 backdrop-blur-sm animate-scale-in" style={{ animationDelay: '0.2s' }}>
-            <Sparkles className="w-4 h-4 text-primary animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted/50 border border-primary/20 backdrop-blur-sm animate-scale-in will-change-transform" style={{ animationDelay: '0.1s' }}>
+            <Sparkles className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-muted-foreground">
               AI-Powered Digital Solutions
             </span>
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight animate-fade-in will-change-transform" style={{ animationDelay: '0.3s' }}>
             We Build{" "}
-            <span className="text-gradient animate-pulse-glow">
+            <span className="text-gradient">
               Smart Websites
             </span>{" "}
             & AI-Powered Solutions
