@@ -17,6 +17,7 @@ import BusinessProcessAutomationGuide from "./pages/blog/business-process-automa
 import EcommerceConversionCaseStudy from "./pages/blog/ecommerce-conversion-case-study";
 import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
+import ScrollManager from "./components/ScrollManager";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollManager />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/services" element={<Services />} />
