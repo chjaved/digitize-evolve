@@ -9,17 +9,17 @@ const additionalServices = [
   {
     category: "Web Development Packages",
     services: [
-      { name: "Startup Website", price: "$2,999", features: ["5 pages", "Responsive design", "SEO optimization", "Contact forms"] },
-      { name: "Business Website", price: "$5,999", features: ["10 pages", "CMS integration", "Analytics setup", "Performance optimization"] },
-      { name: "E-commerce Platform", price: "$9,999", features: ["Product catalog", "Payment integration", "Inventory management", "Order tracking"] }
+      { name: "Startup Website", price: "$150", features: ["5 pages", "Responsive design", "SEO optimization", "Contact forms"] },
+      { name: "Business Website", price: "$250", features: ["10 pages", "CMS integration", "Analytics setup", "Performance optimization"] },
+      { name: "E-commerce Platform", price: "$400", features: ["Product catalog", "Payment integration", "Inventory management", "Order tracking"] }
     ]
   },
   {
     category: "AI Solutions Packages", 
     services: [
-      { name: "AI Chatbot", price: "$3,999", features: ["Custom training", "Multi-platform", "Analytics dashboard", "24/7 support"] },
-      { name: "Process Automation", price: "$7,999", features: ["Workflow analysis", "Custom automation", "Integration setup", "Training included"] },
-      { name: "Predictive Analytics", price: "$12,999", features: ["Data analysis", "ML model training", "Dashboard creation", "Ongoing optimization"] }
+      { name: "AI Chatbot", price: "$200", features: ["Custom training", "Multi-platform", "Analytics dashboard", "24/7 support"] },
+      { name: "Process Automation", price: "$350", features: ["Workflow analysis", "Custom automation", "Integration setup", "Training included"] },
+      { name: "Predictive Analytics", price: "$500", features: ["Data analysis", "ML model training", "Dashboard creation", "Ongoing optimization"] }
     ]
   }
 ];
