@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { 
-  Zap, 
   Mail, 
   Phone, 
   MapPin, 
@@ -9,6 +8,7 @@ import {
   MessageCircle,
   ArrowRight
 } from "lucide-react";
+import bitworkLogo from "@/assets/bitwork-logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -67,11 +67,12 @@ const Footer = () => {
         <div className="grid lg:grid-cols-6 gap-12">
           {/* Brand & Contact */}
           <div className="lg:col-span-2 space-y-6">
-            <a href="/" className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-gradient-primary flex items-center justify-center">
-                <Zap className="w-5 h-5 text-primary-foreground" />
-              </div>
-              <span className="text-xl font-bold text-gradient">Bitwork</span>
+            <a href="/" className="flex items-center gap-3">
+              <img 
+                src={bitworkLogo} 
+                alt="Bitwork Logo" 
+                className="w-12 h-12 object-contain"
+              />
             </a>
             
             <p className="text-muted-foreground leading-relaxed">
