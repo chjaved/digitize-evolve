@@ -38,7 +38,7 @@ const Navigation = () => {
               <img 
                 src={bitworkLogo} 
                 alt="Bitwork Logo" 
-                className="w-14 h-14 object-contain"
+                className="h-12 w-auto max-w-40 object-contain filter drop-shadow-sm"
               />
             </a>
           </div>
