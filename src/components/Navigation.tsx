@@ -34,13 +34,12 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <a href="/" className="flex items-center gap-3">
+            <a href="/" className="flex items-center">
               <img 
                 src={bitworkLogo} 
                 alt="Bitwork Logo" 
-                className="w-10 h-10 object-contain"
+                className="w-12 h-12 object-contain"
               />
-              <span className="text-xl font-bold text-gray-900">Bitwork</span>
             </a>
           </div>
 
@@ -50,10 +49,10 @@ const Navigation = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-smooth relative group"
+                className="text-sm font-medium text-gray-600 hover:text-blue-700 transition-smooth relative group"
               >
                 {item.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-full"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-700 transition-all group-hover:w-full"></span>
               </a>
             ))}
           </div>
@@ -61,7 +60,7 @@ const Navigation = () => {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
             <Button 
-              className="bg-blue-600 hover:bg-blue-700 text-white border-0"
+              className="bg-blue-800 hover:bg-blue-900 text-white border-0"
               size="sm"
               onClick={() => window.open('https://calendly.com/your-calendly-link', '_blank')}
             >
@@ -88,7 +87,7 @@ const Navigation = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="block px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-smooth"
+                  className="block px-4 py-2 text-sm font-medium text-gray-600 hover:text-blue-700 hover:bg-gray-50 rounded-lg transition-smooth"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.label}
@@ -96,7 +95,7 @@ const Navigation = () => {
               ))}
               <div className="flex flex-col gap-3 px-4 pt-4 border-t border-gray-200/50">
                 <Button 
-                  className="bg-blue-600 hover:bg-blue-700 text-white border-0"
+                  className="bg-blue-800 hover:bg-blue-900 text-white border-0"
                   size="sm"
                   onClick={() => window.open('https://calendly.com/your-calendly-link', '_blank')}
                 >
