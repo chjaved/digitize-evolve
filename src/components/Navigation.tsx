@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
-import { Menu, X, Zap } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import bitworkLogo from "@/assets/bitwork-logo.png";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,18 +27,20 @@ const Navigation = () => {
   return (
     <nav className={`fixed top-0 w-full z-50 transition-smooth ${
       isScrolled 
-        ? "bg-background/90 backdrop-blur-md border-b border-border/50 shadow-glow" 
-        : "bg-transparent"
+        ? "bg-white/95 backdrop-blur-md border-b border-gray-200/50 shadow-sm" 
+        : "bg-white/80 backdrop-blur-sm"
     }`}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <a href="/" className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-gradient-primary flex items-center justify-center">
-                <Zap className="w-5 h-5 text-primary-foreground" />
-              </div>
-              <span className="text-xl font-bold text-gradient">Bitwork</span>
+            <a href="/" className="flex items-center gap-3">
+              <img 
+                src={bitworkLogo} 
+                alt="Bitwork Logo" 
+                className="w-10 h-10 object-contain"
+              />
+              <span className="text-xl font-bold text-gray-900">Bitwork</span>
             </a>
           </div>
 
@@ -47,10 +50,10 @@ const Navigation = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-smooth relative group"
+                className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-smooth relative group"
               >
                 {item.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-full"></span>
               </a>
             ))}
           </div>
@@ -58,7 +61,7 @@ const Navigation = () => {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
             <Button 
-              variant="hero" 
+              className="bg-blue-600 hover:bg-blue-700 text-white border-0"
               size="sm"
               onClick={() => window.open('https://calendly.com/your-calendly-link', '_blank')}
             >
@@ -79,21 +82,21 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden border-t border-border/50 bg-background/95 backdrop-blur-md">
+          <div className="md:hidden border-t border-gray-200/50 bg-white/95 backdrop-blur-md">
             <div className="py-6 space-y-4">
               {navItems.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
-                  className="block px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary hover:bg-muted/50 rounded-lg transition-smooth"
+                  className="block px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-smooth"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.label}
                 </a>
               ))}
-              <div className="flex flex-col gap-3 px-4 pt-4 border-t border-border/50">
+              <div className="flex flex-col gap-3 px-4 pt-4 border-t border-gray-200/50">
                 <Button 
-                  variant="hero" 
+                  className="bg-blue-600 hover:bg-blue-700 text-white border-0"
                   size="sm"
                   onClick={() => window.open('https://calendly.com/your-calendly-link', '_blank')}
                 >
