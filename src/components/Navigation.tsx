@@ -27,8 +27,8 @@ const Navigation = () => {
   return (
     <nav className={`fixed top-0 w-full z-50 transition-smooth ${
       isScrolled 
-        ? "bg-white/95 backdrop-blur-md border-b border-gray-200/50 shadow-sm" 
-        : "bg-white/80 backdrop-blur-sm"
+        ? "bg-gray-50/98 backdrop-blur-md border-b border-gray-200/60 shadow-sm" 
+        : "bg-gray-50/95 backdrop-blur-sm"
     }`}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
@@ -38,7 +38,7 @@ const Navigation = () => {
               <img 
                 src={bitworkLogo} 
                 alt="Bitwork Logo" 
-                className="h-12 w-auto max-w-40 object-contain filter drop-shadow-sm"
+                className="h-20 w-auto max-w-48 object-contain filter drop-shadow-md"
               />
             </a>
           </div>
@@ -49,7 +49,7 @@ const Navigation = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-sm font-medium text-gray-600 hover:text-blue-700 transition-smooth relative group"
+                className="text-sm font-medium text-gray-800 hover:text-blue-700 transition-smooth relative group"
               >
                 {item.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-700 transition-all group-hover:w-full"></span>
@@ -81,13 +81,13 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden border-t border-gray-200/50 bg-white/95 backdrop-blur-md">
+          <div className="md:hidden border-t border-gray-200/60 bg-gray-50/98 backdrop-blur-md">
             <div className="py-6 space-y-4">
               {navItems.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
-                  className="block px-4 py-2 text-sm font-medium text-gray-600 hover:text-blue-700 hover:bg-gray-50 rounded-lg transition-smooth"
+                  className="block px-4 py-2 text-sm font-medium text-gray-800 hover:text-blue-700 hover:bg-gray-100 rounded-lg transition-smooth"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.label}
