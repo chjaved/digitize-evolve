@@ -4,19 +4,21 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Users, Code, Brain, Award } from "lucide-react";
+import sardarsImage from "@/assets/sardar-arslan-ali.jpg";
+import javedImage from "@/assets/javed-jabbar.jpg";
 
 const teamMembers = [
   {
     name: "Sardar Arslan Ali",
     role: "CEO and Founder",
     bio: "Visionary leader with extensive experience in technology and business development. Leading the company towards innovative digital solutions.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face"
+    image: sardarsImage
   },
   {
     name: "Javed Jabbar", 
     role: "Director and Co-Founder",
     bio: "Strategic business leader with deep expertise in operations and client relations. Driving growth and excellence in service delivery.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face"
+    image: javedImage
   }
 ];
 
