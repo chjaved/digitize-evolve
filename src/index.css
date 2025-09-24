@@ -84,11 +84,13 @@
     background-image: 
       radial-gradient(circle at 20% 80%, hsl(215 100% 60% / 0.1) 0%, transparent 50%),
       radial-gradient(circle at 80% 20%, hsl(280 100% 70% / 0.1) 0%, transparent 50%);
+    overflow-x: hidden;
   }
 
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  overflow-x: hidden;
 }
 
 * {

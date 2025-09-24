@@ -100,7 +100,7 @@ const HeroSection = () => {
     <section className="relative min-h-screen overflow-hidden">
       <Carousel
         setApi={setApi}
-        className="w-full h-full"
+        className="w-full h-full overflow-hidden"
         opts={{
           align: "start",
           loop: true,
@@ -112,12 +112,12 @@ const HeroSection = () => {
           }),
         ]}
       >
-        <CarouselContent className="ml-0">
+        <CarouselContent className="ml-0 overflow-hidden">
           {slides.map((slide, index) => (
-            <CarouselItem key={slide.id} className="pl-0">
-              <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+            <CarouselItem key={slide.id} className="pl-0 overflow-hidden">
+              <div className="relative min-h-screen flex items-center justify-center overflow-hidden w-full">
                 {/* Dynamic Background with Gradient */}
-                <div className="absolute inset-0 z-0">
+                <div className="absolute inset-0 z-0 overflow-hidden">
                   <div 
                     className="w-full h-full bg-cover bg-center bg-no-repeat opacity-30 will-change-transform scale-105 transition-transform duration-1000"
                     style={{ 
@@ -129,22 +129,24 @@ const HeroSection = () => {
                   <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/60 to-background/80" />
                 </div>
 
-                {/* Animated Floating Elements */}
-                {slide.floatingElements.map((element, idx) => (
-                  <div 
-                    key={idx} 
-                    className={`absolute ${element.position} animate-float will-change-transform transition-opacity duration-1000 ${
-                      current === index ? 'opacity-40' : 'opacity-0'
-                    }`}
-                    style={{ animationDelay: element.delay }}
-                  >
-                    <element.icon className={`${element.size} text-primary`} />
-                  </div>
-                ))}
+                {/* Animated Floating Elements - Constrained to viewport */}
+                <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                  {slide.floatingElements.map((element, idx) => (
+                    <div 
+                      key={idx} 
+                      className={`absolute ${element.position} animate-float will-change-transform transition-opacity duration-1000 ${
+                        current === index ? 'opacity-40' : 'opacity-0'
+                      }`}
+                      style={{ animationDelay: element.delay }}
+                    >
+                      <element.icon className={`${element.size} text-primary`} />
+                    </div>
+                  ))}
+                </div>
 
                 {/* Main Content */}
-                <div className="relative z-10 max-w-6xl mx-auto px-6 text-center pt-20">
-                  <div className={`space-y-8 transition-all duration-1000 ${
+                <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 text-center pt-20 w-full">
+                  <div className={`space-y-8 transition-all duration-1000 max-w-full ${
                     current === index 
                       ? 'opacity-100 transform translate-y-0' 
                       : 'opacity-0 transform translate-y-8'
@@ -167,7 +169,7 @@ const HeroSection = () => {
 
                     {/* Main Headline with Staggered Animation */}
                     <h1 
-                      className={`text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight transition-all duration-700 ${
+                      className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight transition-all duration-700 max-w-full break-words ${
                         current === index ? 'animate-fade-in' : ''
                       }`}
                       style={{ 
@@ -184,7 +186,7 @@ const HeroSection = () => {
 
                     {/* Subheadline */}
                     <p 
-                      className={`text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed transition-all duration-700 ${
+                      className={`text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed transition-all duration-700 px-4 ${
                         current === index ? 'animate-fade-in' : ''
                       }`}
                       style={{ 
@@ -244,11 +246,11 @@ const HeroSection = () => {
                       <p className="text-sm text-muted-foreground mb-6">
                         Trusted by 100+ companies worldwide
                       </p>
-                      <div className="flex flex-wrap justify-center gap-4 md:gap-6 opacity-60">
+                      <div className="flex flex-wrap justify-center gap-2 sm:gap-4 md:gap-6 opacity-60 px-4">
                         {slide.trustBadges.map((badge, badgeIdx) => (
                           <div 
                             key={badgeIdx}
-                            className="px-4 md:px-6 py-2 md:py-3 rounded-lg bg-muted/30 border border-border/50 text-xs md:text-sm font-medium hover:opacity-100 hover:scale-105 transition-smooth"
+                            className="px-3 sm:px-4 md:px-6 py-2 md:py-3 rounded-lg bg-muted/30 border border-border/50 text-xs md:text-sm font-medium hover:opacity-100 hover:scale-105 transition-smooth whitespace-nowrap"
                             style={{ animationDelay: `${badgeIdx * 0.1}s` }}
                           >
                             {badge}
