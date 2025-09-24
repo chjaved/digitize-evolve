@@ -72,7 +72,7 @@ const About = () => {
                   <img 
                     src={member.image} 
                     alt={member.name}
-                    className="w-full h-full object-cover"
+                    className={`w-full h-full object-cover ${member.name === 'Sardar Arslan Ali' ? 'object-top' : ''}`}
                   />
                 </div>
                 <h3 className="text-xl font-bold mb-2">{member.name}</h3>
