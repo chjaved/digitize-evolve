@@ -20,50 +20,66 @@
     />
     <meta property="og:type" content="website" />
 
-    <!-- Preload key font (replace with your actual font file path if different) -->
+    <!-- Preconnect for fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <!-- Preload Inter font -->
     <link
       rel="preload"
-      href="/fonts/Inter-Variable.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      as="style"
+      onload="this.rel='stylesheet'"
     />
 
-    <!-- Preload hero image (replace with your actual image path) -->
+    <!-- Preload hero image (replace with your real hero image path) -->
     <link rel="preload" as="image" href="/assets/hero.webp" />
 
-    <!-- Critical inline CSS (header + hero basics for fast paint) -->
+    <!-- Critical inline CSS (header + hero basics) -->
     <style>
       html,
       body {
         margin: 0;
         padding: 0;
         height: 100%;
-        font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+        font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
           "Helvetica Neue", Arial, sans-serif;
+        background: hsl(220, 27%, 8%);
+        color: hsl(220, 15%, 95%);
       }
       .header {
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
         padding: 1rem 2rem;
-        background: #fff;
       }
-      .header img {
-        height: 48px;
-        width: auto;
+      .logo {
+        height: 3rem;
+        transition: filter 300ms;
+      }
+      .logo:hover {
+        filter: drop-shadow(0 0 2em #646cffaa);
       }
       .hero {
         display: flex;
         align-items: center;
         justify-content: center;
+        text-align: center;
         min-height: 70vh;
         padding: 2rem;
-        text-align: center;
+      }
+      .text-gradient {
+        background: linear-gradient(
+          135deg,
+          hsl(215, 100%, 60%),
+          hsl(280, 100%, 70%)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
     </style>
 
-    <!-- Load compiled stylesheet async (Vite will emit CSS file into /assets) -->
+    <!-- Load full CSS async -->
     <link
       rel="preload"
       href="/src/index.css"
@@ -75,7 +91,6 @@
 
   <body>
     <div id="root"></div>
-    <!-- Defer React app script -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
