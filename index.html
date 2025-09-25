@@ -4,17 +4,78 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bitwork - Web Development & AI Automation Agency</title>
-    <meta name="description" content="Transform your business with cutting-edge web development and AI automation solutions. From websites to intelligent automation - we deliver end-to-end digital solutions that grow businesses." />
+    <meta
+      name="description"
+      content="Transform your business with cutting-edge web development and AI automation solutions. From websites to intelligent automation - we deliver end-to-end digital solutions that grow businesses."
+    />
     <meta name="author" content="Bitwork" />
 
-    <meta property="og:title" content="Bitwork - Web Development & AI Automation Agency" />
-    <meta property="og:description" content="Transform your business with cutting-edge web development and AI automation solutions. From websites to intelligent automation - we deliver end-to-end digital solutions that grow businesses." />
+    <meta
+      property="og:title"
+      content="Bitwork - Web Development & AI Automation Agency"
+    />
+    <meta
+      property="og:description"
+      content="Transform your business with cutting-edge web development and AI automation solutions. From websites to intelligent automation - we deliver end-to-end digital solutions that grow businesses."
+    />
     <meta property="og:type" content="website" />
 
+    <!-- Preload key font (replace with your actual font file path if different) -->
+    <link
+      rel="preload"
+      href="/fonts/Inter-Variable.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <!-- Preload hero image (replace with your actual image path) -->
+    <link rel="preload" as="image" href="/assets/hero.webp" />
+
+    <!-- Critical inline CSS (header + hero basics for fast paint) -->
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background: #fff;
+      }
+      .header img {
+        height: 48px;
+        width: auto;
+      }
+      .hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 70vh;
+        padding: 2rem;
+        text-align: center;
+      }
+    </style>
+
+    <!-- Load compiled stylesheet async (Vite will emit CSS file into /assets) -->
+    <link
+      rel="preload"
+      href="/src/index.css"
+      as="style"
+      onload="this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="/src/index.css" /></noscript>
   </head>
 
   <body>
     <div id="root"></div>
+    <!-- Defer React app script -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
