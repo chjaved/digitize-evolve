@@ -21,7 +21,7 @@ const portfolioItems = [
   },
   {
     title: "E-commerce Platform Redesign",
-    category: "Web Development", 
+    category: "Web Development",
     description: "Complete redesign and development of e-commerce platform resulting in 150% increase in conversions.",
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
     tags: ["E-commerce", "React", "Performance"],
@@ -83,16 +83,51 @@ const portfolioItems = [
       metric3: { label: "Cost Savings", value: "$50k/year" }
     },
     link: "#"
+  },
+  // ---------------- Your Projects ----------------
+  {
+    title: "Global Tours and Umrah Travels",
+    category: "Web Development",
+    description: "Developed a travel and tours website for booking Umrah and international packages with dynamic content.",
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&h=400&fit=crop",
+    tags: ["Travel", "Tours", "Umrah"],
+    results: {
+      metric1: { label: "User Engagement", value: "+200%" },
+      metric2: { label: "Bookings", value: "+150%" },
+      metric3: { label: "Customer Reach", value: "Global" }
+    },
+    link: "https://globaltoursandumrah.com/"
+  },
+  {
+    title: "Darulquran Education System",
+    category: "EdTech",
+    description: "Built an online education platform with Quran courses, user dashboards, and payment integration.",
+    image: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600&h=400&fit=crop",
+    tags: ["Education", "E-Learning", "Islamic"],
+    results: {
+      metric1: { label: "Active Students", value: "5k+" },
+      metric2: { label: "Courses Delivered", value: "200+" },
+      metric3: { label: "Online Growth", value: "+300%" }
+    },
+    link: "https://darulquraneducationsystem.com/"
   }
 ];
 
-const categories = ["All", "AI Automation", "Web Development", "Process Automation", "Custom Solutions", "AI & Web Combo"];
+const categories = [
+  "All",
+  "AI Automation",
+  "Web Development",
+  "Process Automation",
+  "Custom Solutions",
+  "AI & Web Combo",
+  "EdTech"
+];
 
 const Portfolio = () => {
   return (
     <main className="relative">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-6 max-w-7xl mx-auto">
         <div className="text-center animate-fade-in">
@@ -140,9 +175,11 @@ const Portfolio = () => {
                   </Badge>
                 </div>
                 <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-smooth">
-                  <Button size="icon" variant="ghost-glow" className="h-8 w-8">
-                    <ExternalLink className="w-4 h-4" />
-                  </Button>
+                  <a href={item.link} target="_blank" rel="noopener noreferrer">
+                    <Button size="icon" variant="ghost-glow" className="h-8 w-8">
+                      <ExternalLink className="w-4 h-4" />
+                    </Button>
+                  </a>
                 </div>
               </div>
               
@@ -183,10 +220,12 @@ const Portfolio = () => {
                   </div>
                 </div>
 
-                <Button variant="outline" className="w-full group">
-                  View Case Study
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
+                <a href={item.link} target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" className="w-full group">
+                    View Case Study
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </a>
               </CardContent>
             </Card>
           ))}
