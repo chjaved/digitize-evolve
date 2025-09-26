@@ -192,67 +192,6 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-24 px-6 bg-muted/30">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Portfolio Impact</h2>
-            <p className="text-lg text-muted-foreground">
-              The numbers speak for themselves - real results from real projects.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              { icon: TrendingUp, value: "300%", label: "Average ROI Increase" },
-              { icon: Users, value: "100k+", label: "Users Impacted" },
-              { icon: Clock, value: "1000+", label: "Hours Saved Weekly" },
-              { icon: ArrowRight, value: "98%", label: "Client Satisfaction" },
-            ].map((stat, index) => (
-              <Card
-                key={index}
-                className="text-center p-6 border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-glow transition-smooth animate-slide-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <CardContent className="p-0">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-primary/10 flex items-center justify-center">
-                    <stat.icon className="w-8 h-8 text-primary" />
-                  </div>
-                  <div className="text-3xl font-bold text-gradient mb-2">
-                    {stat.value}
-                  </div>
-                  <div className="text-sm text-muted-foreground font-medium">
-                    {stat.label}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-24 px-6 max-w-4xl mx-auto text-center">
-        <div className="animate-fade-in">
-          <h2 className="text-4xl font-bold mb-6">
-            Ready to Join Our Success Stories?
-          </h2>
-          <p className="text-lg text-muted-foreground mb-8">
-            Let's create the next amazing case study together. Your success
-            story starts here.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero" size="lg" className="group">
-              Start Your Project
-              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button variant="outline" size="lg">
-              Download Case Studies
-            </Button>
-          </div>
-        </div>
-      </section>
-
       <Footer />
     </main>
   );
@@ -272,12 +211,12 @@ const PortfolioCard = ({
       className="group overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-glow transition-smooth hover:scale-105 animate-slide-up"
       style={{ animationDelay: `${index * 0.1}s` }}
     >
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden h-[250px]">
         {item.preview && !iframeError ? (
           <iframe
             src={item.preview}
             title={item.title}
-            className="w-full h-48 border-0"
+            className="w-full h-[600px] scale-125 -translate-y-12 border-0 pointer-events-none"
             loading="lazy"
             onError={() => setIframeError(true)}
           />
@@ -285,7 +224,7 @@ const PortfolioCard = ({
           <img
             src={item.fallback}
             alt={item.title}
-            className="w-full h-48 object-cover group-hover:scale-110 transition-smooth"
+            className="w-full h-full object-cover group-hover:scale-110 transition-smooth"
             loading="lazy"
           />
         )}
