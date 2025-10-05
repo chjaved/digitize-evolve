@@ -21,6 +21,7 @@ import NotFound from "./pages/NotFound";
 
 import ScrollManager from "./components/ScrollManager";
 import Layout from "./components/Layout"; // 👈 new layout wrapper
+import Navigation from "./components/Navigation";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +33,7 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <ScrollManager />
+          <Navigation />
           <Routes>
             <Route path="/" element={<Layout><Index /></Layout>} />
             <Route path="/services" element={<Layout><Services /></Layout>} />
