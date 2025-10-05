@@ -1,10 +1,8 @@
-import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
 import AboutSection from "@/components/AboutSection";
 import PricingSection from "@/components/PricingSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import Footer from "@/components/Footer";
 import WhatsAppChat from "@/components/WhatsAppChat";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -13,7 +11,6 @@ import { AnimatedSection } from "@/hooks/useScrollAnimation";
 const Index = () => {
   return (
     <main className="relative">
-      <Navigation />
       <HeroSection />
       
       {/* Services Preview */}
@@ -62,7 +59,6 @@ const Index = () => {
         </section>
       </AnimatedSection>
       
-      <Footer />
       <WhatsAppChat />
     </main>
   );
