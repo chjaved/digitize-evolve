@@ -10,7 +10,7 @@ import { AnimatedSection } from "@/hooks/useScrollAnimation";
 
 const Index = () => {
   return (
-    <main className="relative">
+    <main className="relative pt-16">
       <HeroSection />
       
       {/* Services Preview */}
