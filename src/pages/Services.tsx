@@ -1,6 +1,4 @@
-import Navigation from "@/components/Navigation";
 import ServicesSection from "@/components/ServicesSection";
-import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, CheckCircle, Star } from "lucide-react";
@@ -27,7 +25,6 @@ const additionalServices = [
 const Services = () => {
   return (
     <main className="relative">
-      <Navigation />
       
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-6 max-w-7xl mx-auto">
@@ -114,8 +111,6 @@ const Services = () => {
           </cite>
         </div>
       </section>
-
-      <Footer />
     </main>
   );
 };

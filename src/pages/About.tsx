@@ -1,6 +1,4 @@
-import Navigation from "@/components/Navigation";
 import AboutSection from "@/components/AboutSection";
-import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Users, Code, Brain, Award } from "lucide-react";
@@ -34,7 +32,6 @@ const milestones = [
 const About = () => {
   return (
     <main className="relative">
-      <Navigation />
       
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-6 max-w-7xl mx-auto">
@@ -168,8 +165,6 @@ const About = () => {
           </Button>
         </div>
       </section>
-
-      <Footer />
     </main>
   );
 };

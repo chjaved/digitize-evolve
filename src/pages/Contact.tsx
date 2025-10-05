@@ -1,6 +1,4 @@
-import Navigation from "@/components/Navigation";
 import ContactSection from "@/components/ContactSection";
-import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { 
@@ -73,7 +71,6 @@ const faqs = [
 const Contact = () => {
   return (
     <main className="relative">
-      <Navigation />
       
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-6 max-w-7xl mx-auto">
@@ -264,8 +261,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </main>
   );
 };
