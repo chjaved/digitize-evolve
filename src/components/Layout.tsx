@@ -1,12 +1,12 @@
-import Navbar from "@/components/Navbar"; // adjust path if different
-import Footer from "@/components/Footer"; // optional
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="min-h-screen bg-background">
-      {/* Header (Navbar stays on top) */}
+      {/* Header (Navigation stays on top) */}
       <header className="header">
-        <Navbar />
+        <Navigation />
       </header>
 
       {/* Scrollable content starts after header */}
