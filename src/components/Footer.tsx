@@ -62,8 +62,33 @@ const Footer = () => {
 
   return (
     <footer className="bg-gray-50/95 border-t border-gray-200/60">
-      {/* Main Footer */}
+      {/* Newsletter Signup */}
       <div className="max-w-7xl mx-auto px-6 py-16">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h3 className="text-2xl font-bold mb-2 text-gray-900">Stay Updated</h3>
+            <p className="text-gray-700">
+              Get the latest insights on AI, web development, and digital transformation.
+            </p>
+          </div>
+          <div className="flex gap-3">
+            <div className="flex-1">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="w-full px-4 py-3 rounded-lg bg-white border border-gray-200/60 focus:border-primary focus:outline-none transition-smooth text-gray-900"
+              />
+            </div>
+            <Button variant="hero" size="lg" className="group">
+              Subscribe
+              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Footer */}
+      <div className="max-w-7xl mx-auto px-6 py-16 border-t border-gray-200/60">
         <div className="grid lg:grid-cols-6 gap-12">
           {/* Brand & Contact */}
           <div className="lg:col-span-2 space-y-6">
@@ -136,31 +161,6 @@ const Footer = () => {
               </ul>
             </div>
           ))}
-        </div>
-
-        {/* Newsletter Signup */}
-        <div className="mt-16 pt-8 border-t border-gray-200/60">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h3 className="text-2xl font-bold mb-2 text-gray-900">Stay Updated</h3>
-              <p className="text-gray-700">
-                Get the latest insights on AI, web development, and digital transformation.
-              </p>
-            </div>
-            <div className="flex gap-3">
-              <div className="flex-1">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="w-full px-4 py-3 rounded-lg bg-white border border-gray-200/60 focus:border-primary focus:outline-none transition-smooth text-gray-900"
-                />
-              </div>
-              <Button variant="hero" size="lg" className="group">
-                Subscribe
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </div>
-          </div>
         </div>
       </div>
 
