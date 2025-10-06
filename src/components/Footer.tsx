@@ -61,9 +61,10 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-50/95 border-t border-gray-200/60">
+    <footer className="border-t border-gray-200/60">
       {/* Newsletter Signup */}
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="bg-gradient-to-br from-primary/5 to-secondary/5 border-b border-gray-200/40">
+        <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div>
             <h3 className="text-2xl font-bold mb-2 text-gray-900">Stay Updated</h3>
@@ -85,10 +86,12 @@ const Footer = () => {
             </Button>
           </div>
         </div>
+        </div>
       </div>
 
       {/* Main Footer */}
-      <div className="max-w-7xl mx-auto px-6 py-16 border-t border-gray-200/60">
+      <div className="bg-gray-50/95">
+        <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid lg:grid-cols-6 gap-12">
           {/* Brand & Contact */}
           <div className="lg:col-span-2 space-y-6">
@@ -161,6 +164,7 @@ const Footer = () => {
               </ul>
             </div>
           ))}
+        </div>
         </div>
       </div>
 
