@@ -63,7 +63,7 @@ const Footer = () => {
   return (
     <footer className="border-t border-gray-200/60">
       {/* Newsletter Signup */}
-      <div className="bg-gray-100/60 border-b border-gray-200/40">
+      <div className="bg-gray-50/50 border-b border-gray-200/40">
         <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div>
