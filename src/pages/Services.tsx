@@ -1,4 +1,3 @@
-import ServicesSection from "@/components/ServicesSection";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, CheckCircle, Star } from "lucide-react";
@@ -41,9 +40,6 @@ const Services = () => {
           </Button>
         </div>
       </section>
-
-      {/* Main Services */}
-      <ServicesSection />
 
       {/* Detailed Packages */}
       <section className="py-24 px-6 max-w-7xl mx-auto">
