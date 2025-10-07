@@ -7,6 +7,7 @@ import {
   Zap 
 } from "lucide-react";
 import heroImage from "@/assets/hero-tech-bg.jpg";
+import AnimatedTechBackground from "./AnimatedTechBackground";
 
 const HeroSection = () => {
   return (
@@ -15,11 +16,12 @@ const HeroSection = () => {
         {/* Dynamic Background with Gradient */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div 
-            className="w-full h-full bg-cover bg-center bg-no-repeat opacity-30 will-change-transform transition-transform duration-1000"
+            className="w-full h-full bg-cover bg-center bg-no-repeat opacity-20 will-change-transform transition-transform duration-1000"
             style={{ backgroundImage: `url(${heroImage})` }}
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/10 to-secondary/20 backdrop-blur-[1px]" />
-          <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/60 to-background/80" />
+          <AnimatedTechBackground />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-primary/5 to-secondary/10 backdrop-blur-[1px]" />
+          <div className="absolute inset-0 bg-gradient-to-br from-background/85 via-background/70 to-background/85" />
         </div>
 
         {/* Animated Floating Elements */}
