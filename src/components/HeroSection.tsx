@@ -13,15 +13,20 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen overflow-hidden">
       <div className="relative min-h-screen flex items-center justify-center overflow-hidden w-full">
+        
         {/* Dynamic Background with Gradient */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div 
-            className="w-full h-full bg-cover bg-center bg-no-repeat opacity-20 will-change-transform transition-transform duration-1000"
+            className="w-full h-full bg-cover bg-center bg-no-repeat opacity-30 will-change-transform transition-transform duration-1000"
             style={{ backgroundImage: `url(${heroImage})` }}
           />
           <AnimatedTechBackground />
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-primary/5 to-secondary/10 backdrop-blur-[1px]" />
-          <div className="absolute inset-0 bg-gradient-to-br from-background/85 via-background/70 to-background/85" />
+          
+          {/* Subtle tinted overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/10 to-secondary/20 backdrop-blur-[2px]" />
+          
+          {/* Stronger dark overlay for contrast */}
+          <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/85 to-background/90" />
         </div>
 
         {/* Animated Floating Elements */}
@@ -40,6 +45,7 @@ const HeroSection = () => {
         {/* Main Content */}
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 text-center pt-20 w-full">
           <div className="space-y-8 max-w-full">
+            
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted/50 border border-primary/20 backdrop-blur-sm animate-scale-in">
               <Sparkles className="w-4 h-4 text-primary" />
@@ -102,6 +108,7 @@ const HeroSection = () => {
                 ))}
               </div>
             </div>
+
           </div>
         </div>
       </div>
