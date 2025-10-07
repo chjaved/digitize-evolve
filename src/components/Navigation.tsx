@@ -25,20 +25,23 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className={`sticky top-0 w-full z-50 transition-smooth ${
-      isScrolled 
-        ? "bg-gray-50/98 backdrop-blur-md border-b border-gray-200/60 shadow-sm" 
-        : "bg-gray-50/95 backdrop-blur-sm"
-    }`}>
+    <nav
+      className={`sticky top-0 w-full z-50 transition-smooth ${
+        isScrolled
+          ? "bg-gray-50/98 backdrop-blur-md border-b border-gray-200/60 shadow-sm"
+          : "bg-transparent"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
+          
           {/* Logo */}
           <div className="flex items-center gap-2">
             <a href="/" className="flex items-center">
-              <img 
-                src={bitworkLogo} 
-                alt="Bitwork Logo" 
-                className="h-20 w-auto max-w-48 object-contain filter drop-shadow-md"
+              <img
+                src={bitworkLogo}
+                alt="Bitwork Logo"
+                className="h-16 w-auto max-w-48 object-contain filter drop-shadow-md"
               />
             </a>
           </div>
@@ -59,10 +62,12 @@ const Navigation = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
-            <Button 
+            <Button
               className="bg-blue-800 hover:bg-blue-900 text-white border-0"
               size="sm"
-              onClick={() => window.open('https://calendly.com/your-calendly-link', '_blank')}
+              onClick={() =>
+                window.open("https://calendly.com/your-calendly-link", "_blank")
+              }
             >
               Get Started
             </Button>
@@ -75,7 +80,19 @@ const Navigation = () => {
             className="md:hidden"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            {isMobileMenuOpen ? (
+              <X
+                className={`w-6 h-6 ${
+                  isScrolled ? "text-gray-800" : "text-white"
+                }`}
+              />
+            ) : (
+              <Menu
+                className={`w-6 h-6 ${
+                  isScrolled ? "text-gray-800" : "text-white"
+                }`}
+              />
+            )}
           </Button>
         </div>
 
@@ -94,10 +111,12 @@ const Navigation = () => {
                 </a>
               ))}
               <div className="flex flex-col gap-3 px-4 pt-4 border-t border-gray-200/50">
-                <Button 
+                <Button
                   className="bg-blue-800 hover:bg-blue-900 text-white border-0"
                   size="sm"
-                  onClick={() => window.open('https://calendly.com/your-calendly-link', '_blank')}
+                  onClick={() =>
+                    window.open("https://calendly.com/your-calendly-link", "_blank")
+                  }
                 >
                   Get Started
                 </Button>
