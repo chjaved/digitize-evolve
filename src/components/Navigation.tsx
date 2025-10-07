@@ -12,7 +12,7 @@ const Navigation = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    // ✅ Run once on mount to check initial scroll position
+    // ✅ Run immediately on mount so background shows correctly after refresh
     handleScroll();
 
     window.addEventListener("scroll", handleScroll);
@@ -33,7 +33,7 @@ const Navigation = () => {
       className={`sticky top-0 w-full z-50 transition-smooth ${
         isScrolled
           ? "bg-gray-50/98 backdrop-blur-md border-b border-gray-200/60 shadow-sm"
-          : "bg-gray-50/95 backdrop-blur-sm" // ✅ default light background
+          : "bg-gray-50/95 backdrop-blur-sm" // ✅ default visible background
       }`}
     >
       <div className="max-w-7xl mx-auto px-6">
