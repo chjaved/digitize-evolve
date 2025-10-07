@@ -1,5 +1,3 @@
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
@@ -51,8 +49,6 @@ const FAQ = () => {
 
   return (
     <main className="relative">
-      <Navigation />
-      
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-6 bg-gradient-to-br from-background via-background to-muted/20">
         <div className="max-w-4xl mx-auto text-center">
@@ -131,8 +127,6 @@ const FAQ = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </main>
   );
 };

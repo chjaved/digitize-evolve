@@ -1,5 +1,3 @@
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Calendar, User, TrendingUp, CheckCircle } from "lucide-react";
@@ -7,8 +5,6 @@ import { ArrowRight, Calendar, User, TrendingUp, CheckCircle } from "lucide-reac
 const AIAutomationCaseStudy = () => {
   return (
     <main className="relative">
-      <Navigation />
-      
       {/* Article Header */}
       <article className="pt-24 pb-16 px-6 max-w-4xl mx-auto">
         <div className="animate-fade-in">
@@ -263,8 +259,6 @@ const AIAutomationCaseStudy = () => {
           </div>
         </div>
       </article>
-
-      <Footer />
     </main>
   );
 };

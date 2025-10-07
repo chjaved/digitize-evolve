@@ -1,13 +1,9 @@
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Shield, Calendar } from "lucide-react";
 
 const Privacy = () => {
   return (
     <main className="relative">
-      <Navigation />
-      
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-6 bg-gradient-to-br from-background via-background to-muted/20">
         <div className="max-w-4xl mx-auto text-center">
@@ -212,8 +208,6 @@ If you have questions about this privacy policy or how we handle your informatio
 
         </div>
       </section>
-
-      <Footer />
     </main>
   );
 };

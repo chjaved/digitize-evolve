@@ -1,5 +1,3 @@
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -77,8 +75,6 @@ const Blog = () => {
 
   return (
     <main className="relative">
-      <Navigation />
-      
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-6 max-w-7xl mx-auto">
         <div className="text-center animate-fade-in">
@@ -303,8 +299,6 @@ const Blog = () => {
           ))}
         </div>
       </section>
-
-      <Footer />
     </main>
   );
 };
