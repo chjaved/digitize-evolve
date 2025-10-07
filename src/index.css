@@ -8,47 +8,47 @@
 
 @layer base {
   :root {
-    /* Base colors - Deep navy and charcoal theme */
-    --background: 220 27% 8%;
-    --foreground: 220 15% 95%;
+    /* Base colors - Clean light theme with blue accents */
+    --background: 210 40% 98%;
+    --foreground: 220 15% 10%;
 
-    --card: 220 25% 10%;
-    --card-foreground: 220 15% 92%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 10%;
 
-    --popover: 220 25% 10%;
-    --popover-foreground: 220 15% 92%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 10%;
 
-    /* Electric blue primary with neon purple accents */
-    --primary: 215 100% 60%;
-    --primary-foreground: 220 27% 8%;
+    /* Professional blue primary with modern accents */
+    --primary: 215 100% 50%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 280 100% 70%;
-    --secondary-foreground: 220 27% 8%;
+    --secondary: 215 90% 92%;
+    --secondary-foreground: 215 100% 25%;
 
-    --muted: 220 20% 15%;
-    --muted-foreground: 220 10% 65%;
+    --muted: 210 30% 95%;
+    --muted-foreground: 220 10% 45%;
 
-    --accent: 195 100% 65%;
-    --accent-foreground: 220 27% 8%;
+    --accent: 210 100% 60%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 220 20% 18%;
-    --input: 220 20% 12%;
-    --ring: 215 100% 60%;
+    --border: 215 20% 88%;
+    --input: 215 20% 92%;
+    --ring: 215 100% 50%;
 
     --radius: 0.75rem;
 
     /* Gradients for modern effects */
-    --gradient-primary: linear-gradient(135deg, hsl(215 100% 60%), hsl(280 100% 70%));
-    --gradient-secondary: linear-gradient(135deg, hsl(195 100% 65%), hsl(215 100% 60%));
-    --gradient-accent: linear-gradient(135deg, hsl(280 100% 70%), hsl(315 100% 65%));
-    --gradient-background: linear-gradient(135deg, hsl(220 27% 8%), hsl(220 25% 10%));
+    --gradient-primary: linear-gradient(135deg, hsl(215 100% 50%), hsl(210 100% 60%));
+    --gradient-secondary: linear-gradient(135deg, hsl(210 100% 60%), hsl(215 90% 70%));
+    --gradient-accent: linear-gradient(135deg, hsl(215 100% 50%), hsl(220 100% 55%));
+    --gradient-background: linear-gradient(135deg, hsl(210 40% 98%), hsl(210 35% 96%));
 
     /* Animations and shadows */
-    --shadow-glow: 0 0 30px hsl(215 100% 60% / 0.3);
-    --shadow-glow-purple: 0 0 30px hsl(280 100% 70% / 0.3);
+    --shadow-glow: 0 0 30px hsl(215 100% 50% / 0.2);
+    --shadow-glow-purple: 0 0 30px hsl(210 100% 60% / 0.2);
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
@@ -82,8 +82,8 @@
     @apply bg-background text-foreground font-inter antialiased;
     background: hsl(var(--background));
     background-image: 
-      radial-gradient(circle at 20% 80%, hsl(215 100% 60% / 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, hsl(280 100% 70% / 0.1) 0%, transparent 50%);
+      radial-gradient(circle at 20% 80%, hsl(215 100% 50% / 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(210 100% 60% / 0.05) 0%, transparent 50%);
     overflow-x: hidden;
   }
 
