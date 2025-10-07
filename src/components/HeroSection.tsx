@@ -47,8 +47,8 @@ const HeroSection = () => {
           <div className="space-y-8 max-w-full">
             
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted/50 border border-primary/20 backdrop-blur-sm animate-scale-in">
-              <Sparkles className="w-4 h-4 text-primary" />
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-gray-300 backdrop-blur-sm animate-scale-in">
+              <Sparkles className="w-4 h-4 text-black" />
               <span className="text-sm font-medium text-muted-foreground">
                 AI-Powered Digital Solutions
               </span>
