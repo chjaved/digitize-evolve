@@ -11,6 +11,10 @@ const Navigation = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
+
+    // ✅ Run once on mount to check initial scroll position
+    handleScroll();
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -29,24 +33,22 @@ const Navigation = () => {
       className={`sticky top-0 w-full z-50 transition-smooth ${
         isScrolled
           ? "bg-gray-50/98 backdrop-blur-md border-b border-gray-200/60 shadow-sm"
-          : "bg-transparent"
+          : "bg-gray-50/95 backdrop-blur-sm" // ✅ default light background
       }`}
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <a href="/" className="flex items-center">
-              <img
-                src={bitworkLogo}
-                alt="Bitwork Logo"
-                className="h-16 w-auto max-w-48 object-contain filter drop-shadow-md"
-              />
-            </a>
-          </div>
+          <a href="/" className="flex items-center">
+            <img
+              src={bitworkLogo}
+              alt="Bitwork Logo"
+              className="h-16 w-auto max-w-48 object-contain filter drop-shadow-md"
+            />
+          </a>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <a
@@ -81,17 +83,9 @@ const Navigation = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
-              <X
-                className={`w-6 h-6 ${
-                  isScrolled ? "text-gray-800" : "text-white"
-                }`}
-              />
+              <X className="w-6 h-6 text-gray-800" />
             ) : (
-              <Menu
-                className={`w-6 h-6 ${
-                  isScrolled ? "text-gray-800" : "text-white"
-                }`}
-              />
+              <Menu className="w-6 h-6 text-gray-800" />
             )}
           </Button>
         </div>
