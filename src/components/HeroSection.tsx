@@ -14,19 +14,19 @@ const HeroSection = () => {
     <section className="relative min-h-screen overflow-hidden">
       <div className="relative min-h-screen flex items-center justify-center overflow-hidden w-full">
         
-        {/* Background with stronger opacity and overlays */}
+        {/* Background with softer overlays */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div 
-            className="w-full h-full bg-cover bg-center bg-no-repeat opacity-20 will-change-transform transition-transform duration-1000"
+            className="w-full h-full bg-cover bg-center bg-no-repeat opacity-30 will-change-transform transition-transform duration-1000"
             style={{ backgroundImage: `url(${heroImage})` }}
           />
           <AnimatedTechBackground />
 
           {/* Subtle tint overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-primary/20 to-secondary/30 backdrop-blur-[3px]" />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/10 to-secondary/20 backdrop-blur-[2px]" />
 
-          {/* Dark overlay for strong contrast */}
-          <div className="absolute inset-0 bg-black/90" />
+          {/* Dark overlay with less opacity */}
+          <div className="absolute inset-0 bg-black/30" />
         </div>
 
         {/* Animated Floating Elements */}
@@ -64,7 +64,7 @@ const HeroSection = () => {
             </h1>
 
             {/* Subheadline */}
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed animate-fade-in px-4">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed animate-fade-in px-4">
               From websites to intelligent automation — we deliver end-to-end digital solutions that{" "}
               <span className="text-primary font-semibold">grow businesses</span> and{" "}
               <span className="text-primary font-semibold">scale operations</span>.
@@ -94,10 +94,10 @@ const HeroSection = () => {
 
             {/* Trust Indicators */}
             <div className="pt-8 md:pt-12 animate-fade-in">
-              <p className="text-sm text-gray-400 mb-6">
+              <p className="text-sm text-gray-300 mb-6">
                 Trusted by 100+ companies worldwide
               </p>
-              <div className="flex flex-wrap justify-center gap-2 sm:gap-4 md:gap-6 opacity-70 px-4">
+              <div className="flex flex-wrap justify-center gap-2 sm:gap-4 md:gap-6 opacity-80 px-4">
                 {["SaaS Platforms", "E-commerce", "Enterprise", "Startups"].map((badge, badgeIdx) => (
                   <div 
                     key={badgeIdx}
