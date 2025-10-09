@@ -38,27 +38,27 @@ const HeroSection = () => {
               </p>
 
               {/* Feature Badges */}
-              <div className="flex flex-col sm:flex-row gap-4">
-                <div className="flex items-center gap-3 px-5 py-3 rounded-full bg-blue-500/10 border border-blue-500/30 backdrop-blur-sm shadow-[0_0_20px_rgba(59,130,246,0.2)] hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-shadow">
-                  <div className="w-10 h-10 rounded-full bg-blue-500/30 flex items-center justify-center shadow-[0_0_15px_rgba(59,130,246,0.4)]">
-                    <Code2 className="w-5 h-5 text-blue-400 drop-shadow-[0_0_5px_rgba(96,165,250,0.8)]" />
+              <div className="flex flex-wrap gap-3">
+                <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/30 backdrop-blur-sm shadow-[0_0_20px_rgba(59,130,246,0.2)] hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-shadow">
+                  <div className="w-8 h-8 rounded-full bg-blue-500/30 flex items-center justify-center shadow-[0_0_15px_rgba(59,130,246,0.4)]">
+                    <Code2 className="w-4 h-4 text-blue-400 drop-shadow-[0_0_5px_rgba(96,165,250,0.8)]" />
                   </div>
-                  <span className="text-white font-medium">Custom Development</span>
+                  <span className="text-white font-medium text-sm">Custom Development</span>
                 </div>
                 
-                <div className="flex items-center gap-3 px-5 py-3 rounded-full bg-blue-500/10 border border-blue-500/30 backdrop-blur-sm shadow-[0_0_20px_rgba(59,130,246,0.2)] hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-shadow">
-                  <div className="w-10 h-10 rounded-full bg-blue-500/30 flex items-center justify-center shadow-[0_0_15px_rgba(59,130,246,0.4)]">
-                    <Zap className="w-5 h-5 text-blue-400 drop-shadow-[0_0_5px_rgba(96,165,250,0.8)]" />
+                <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/30 backdrop-blur-sm shadow-[0_0_20px_rgba(59,130,246,0.2)] hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-shadow">
+                  <div className="w-8 h-8 rounded-full bg-blue-500/30 flex items-center justify-center shadow-[0_0_15px_rgba(59,130,246,0.4)]">
+                    <Zap className="w-4 h-4 text-blue-400 drop-shadow-[0_0_5px_rgba(96,165,250,0.8)]" />
                   </div>
-                  <span className="text-white font-medium">AI Integration</span>
+                  <span className="text-white font-medium text-sm">AI Integration</span>
                 </div>
-              </div>
 
-              <div className="flex items-center gap-3 px-5 py-3 rounded-full bg-blue-500/10 border border-blue-500/30 backdrop-blur-sm w-fit shadow-[0_0_20px_rgba(59,130,246,0.2)] hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-shadow">
-                <div className="w-10 h-10 rounded-full bg-blue-500/30 flex items-center justify-center shadow-[0_0_15px_rgba(59,130,246,0.4)]">
-                  <Shield className="w-5 h-5 text-blue-400 drop-shadow-[0_0_5px_rgba(96,165,250,0.8)]" />
+                <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/30 backdrop-blur-sm shadow-[0_0_20px_rgba(59,130,246,0.2)] hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-shadow">
+                  <div className="w-8 h-8 rounded-full bg-blue-500/30 flex items-center justify-center shadow-[0_0_15px_rgba(59,130,246,0.4)]">
+                    <Shield className="w-4 h-4 text-blue-400 drop-shadow-[0_0_5px_rgba(96,165,250,0.8)]" />
+                  </div>
+                  <span className="text-white font-medium text-sm">Enterprise Security</span>
                 </div>
-                <span className="text-white font-medium">Enterprise Security</span>
               </div>
 
               {/* CTA Buttons */}
