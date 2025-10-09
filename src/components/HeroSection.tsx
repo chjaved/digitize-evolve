@@ -122,7 +122,7 @@ const HeroSection = () => {
                     <h3 className="text-white font-bold text-lg mb-4">Technologies We Master</h3>
                     
                     <div className="flex flex-wrap gap-3">
-                      {["React", "Node.js", "Python", "AI/ML", "Cloud"].map((tech) => (
+                      {["React", "Node.js", "Python", "AI/ML", "Next.js", "Figma", "WordPress", "Shopify", "Wix", "Framer", "n8n"].map((tech) => (
                         <span 
                           key={tech}
                           className="px-4 py-2 rounded-lg bg-blue-500/10 border border-blue-500/30 text-white text-sm font-medium hover:bg-blue-500/20 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] transition-all"
@@ -130,9 +130,6 @@ const HeroSection = () => {
                           {tech}
                         </span>
                       ))}
-                      <span className="px-4 py-2 rounded-lg bg-blue-500/10 border border-blue-500/30 text-white text-sm font-medium hover:bg-blue-500/20 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] transition-all">
-                        Blockchain
-                      </span>
                     </div>
                   </div>
                 </div>
