@@ -93,15 +93,15 @@ const HeroSection = () => {
             </div>
 
             {/* Trust Indicators */}
-            <div className="pt-8 md:pt-12 animate-fade-in">
+            <div className="pt-8 md:pt-12 animate-fade-in mb-16 md:mb-24">
               <p className="text-sm text-gray-300 mb-6">
                 Trusted by 100+ companies worldwide
               </p>
-              <div className="flex flex-wrap justify-center gap-2 sm:gap-4 md:gap-6 opacity-80 px-4">
+              <div className="flex flex-wrap justify-center gap-2 sm:gap-4 md:gap-6 px-4">
                 {["SaaS Platforms", "E-commerce", "Enterprise", "Startups"].map((badge, badgeIdx) => (
                   <div 
                     key={badgeIdx}
-                    className="px-3 sm:px-4 md:px-6 py-2 md:py-3 rounded-lg bg-muted/30 border border-border/50 text-xs md:text-sm font-medium text-white hover:opacity-100 hover:scale-105 transition-smooth whitespace-nowrap"
+                    className="px-3 sm:px-4 md:px-6 py-2 md:py-3 rounded-lg bg-gradient-to-br from-primary/20 to-primary/10 border-2 border-primary/30 text-xs md:text-sm font-semibold text-white hover:border-primary/60 hover:shadow-[0_0_20px_rgba(var(--primary-raw),0.4)] hover:scale-105 transition-smooth whitespace-nowrap backdrop-blur-sm"
                   >
                     {badge}
                   </div>
