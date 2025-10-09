@@ -15,10 +15,8 @@ const HeroSection = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             
-            {/* Left Column - Content */}
+            {/* Left Column */}
             <div className="space-y-8 animate-fade-in">
-              
-              {/* Main Headline */}
               <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
                 <span className="text-white">We Build </span>
                 <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -30,7 +28,6 @@ const HeroSection = () => {
                 </span>
               </h1>
 
-              {/* Subheadline */}
               <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
                 From websites to intelligent automation — we deliver end-to-end digital solutions that{" "}
                 <span className="text-blue-400 font-semibold">grow businesses</span> and{" "}
@@ -39,26 +36,21 @@ const HeroSection = () => {
 
               {/* Feature Badges */}
               <div className="flex flex-wrap gap-3">
-                <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/30 backdrop-blur-sm shadow-[0_0_20px_rgba(59,130,246,0.2)] hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-shadow">
-                  <div className="w-8 h-8 rounded-full bg-blue-500/30 flex items-center justify-center shadow-[0_0_15px_rgba(59,130,246,0.4)]">
-                    <Code2 className="w-4 h-4 text-blue-400 drop-shadow-[0_0_5px_rgba(96,165,250,0.8)]" />
+                {[
+                  { icon: <Code2 className="w-4 h-4 text-blue-400" />, text: "Custom Development" },
+                  { icon: <Zap className="w-4 h-4 text-blue-400" />, text: "AI Integration" },
+                  { icon: <Shield className="w-4 h-4 text-blue-400" />, text: "Enterprise Security" },
+                ].map((item, i) => (
+                  <div
+                    key={i}
+                    className="flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/30 backdrop-blur-sm shadow-[0_0_20px_rgba(59,130,246,0.2)] hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-shadow"
+                  >
+                    <div className="w-8 h-8 rounded-full bg-blue-500/30 flex items-center justify-center shadow-[0_0_15px_rgba(59,130,246,0.4)]">
+                      {item.icon}
+                    </div>
+                    <span className="text-white font-medium text-sm">{item.text}</span>
                   </div>
-                  <span className="text-white font-medium text-sm">Custom Development</span>
-                </div>
-                
-                <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/30 backdrop-blur-sm shadow-[0_0_20px_rgba(59,130,246,0.2)] hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-shadow">
-                  <div className="w-8 h-8 rounded-full bg-blue-500/30 flex items-center justify-center shadow-[0_0_15px_rgba(59,130,246,0.4)]">
-                    <Zap className="w-4 h-4 text-blue-400 drop-shadow-[0_0_5px_rgba(96,165,250,0.8)]" />
-                  </div>
-                  <span className="text-white font-medium text-sm">AI Integration</span>
-                </div>
-
-                <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/30 backdrop-blur-sm shadow-[0_0_20px_rgba(59,130,246,0.2)] hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-shadow">
-                  <div className="w-8 h-8 rounded-full bg-blue-500/30 flex items-center justify-center shadow-[0_0_15px_rgba(59,130,246,0.4)]">
-                    <Shield className="w-4 h-4 text-blue-400 drop-shadow-[0_0_5px_rgba(96,165,250,0.8)]" />
-                  </div>
-                  <span className="text-white font-medium text-sm">Enterprise Security</span>
-                </div>
+                ))}
               </div>
 
               {/* CTA Buttons */}
@@ -86,48 +78,53 @@ const HeroSection = () => {
                   </span>
                 </Button>
               </div>
-
             </div>
 
-            {/* Right Column - Stats & Tech Card */}
+            {/* Right Column - Updated Card */}
             <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <div className="relative rounded-3xl border border-blue-500/30 bg-gradient-to-br from-blue-950/50 to-blue-900/30 backdrop-blur-xl p-8 shadow-[0_0_60px_rgba(59,130,246,0.3)]">
+              <div className="relative rounded-3xl border border-blue-500/30 bg-gradient-to-br from-blue-950/50 to-blue-900/30 backdrop-blur-xl p-10 min-h-[550px] shadow-[0_0_60px_rgba(59,130,246,0.3)] flex flex-col justify-between">
                 
-                {/* Ambient Glow Effect */}
+                {/* Glow */}
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-500/10 to-cyan-500/10 blur-2xl -z-10"></div>
                 
-                {/* Stats Grid */}
-                <div className="grid grid-cols-2 gap-6 mb-8">
-                  <div className="relative bg-[#1e2942] rounded-2xl p-6 border border-blue-500/20 shadow-[0_0_30px_rgba(59,130,246,0.2)] hover:shadow-[0_0_40px_rgba(59,130,246,0.4)] transition-shadow">
-                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/5 to-transparent"></div>
-                    <div className="relative">
-                      <div className="text-4xl font-bold text-cyan-400 mb-2 drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]">100+</div>
+                {/* Stats */}
+                <div>
+                  <div className="grid grid-cols-2 gap-6 mb-8">
+                    <div className="relative bg-[#1e2942] rounded-2xl p-6 border border-blue-500/20 shadow-[0_0_30px_rgba(59,130,246,0.2)]">
+                      <div className="text-4xl font-bold text-cyan-400 mb-2">100+</div>
                       <div className="text-gray-400 text-sm">Projects Delivered</div>
                     </div>
-                  </div>
-                  
-                  <div className="relative bg-[#1e2942] rounded-2xl p-6 border border-blue-500/20 shadow-[0_0_30px_rgba(59,130,246,0.2)] hover:shadow-[0_0_40px_rgba(59,130,246,0.4)] transition-shadow">
-                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-500/5 to-transparent"></div>
-                    <div className="relative">
-                      <div className="text-4xl font-bold text-cyan-400 mb-2 drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]">50+</div>
+                    <div className="relative bg-[#1e2942] rounded-2xl p-6 border border-blue-500/20 shadow-[0_0_30px_rgba(59,130,246,0.2)]">
+                      <div className="text-4xl font-bold text-cyan-400 mb-2">50+</div>
                       <div className="text-gray-400 text-sm">Happy Clients</div>
                     </div>
                   </div>
-                </div>
 
-                {/* Technologies Section */}
-                <div className="relative bg-[#1e2942] rounded-2xl p-6 border border-blue-500/20 shadow-[0_0_30px_rgba(59,130,246,0.2)]">
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/5 to-transparent"></div>
-                  <div className="relative">
+                  {/* Tech */}
+                  <div className="relative bg-[#1e2942] rounded-2xl p-6 border border-blue-500/20 mb-8">
                     <h3 className="text-white font-bold text-lg mb-4">Technologies We Master</h3>
-                    
                     <div className="flex flex-wrap gap-3">
                       {["React", "Node.js", "Python", "AI/ML", "Next.js", "Figma", "WordPress", "Shopify", "Wix", "Framer", "n8n"].map((tech) => (
                         <span 
                           key={tech}
-                          className="px-4 py-2 rounded-lg bg-blue-500/10 border border-blue-500/30 text-white text-sm font-medium hover:bg-blue-500/20 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] transition-all"
+                          className="px-4 py-2 rounded-lg bg-blue-500/10 border border-blue-500/30 text-white text-sm font-medium hover:bg-blue-500/20 transition-all"
                         >
                           {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Trusted By */}
+                  <div className="relative bg-[#1e2942] rounded-2xl p-6 border border-blue-500/20">
+                    <h3 className="text-white font-bold text-lg mb-4">Trusted by 100+ companies worldwide</h3>
+                    <div className="flex flex-wrap gap-3">
+                      {["SaaS Platforms", "E-commerce", "Enterprise", "Startups"].map((item) => (
+                        <span 
+                          key={item}
+                          className="px-4 py-2 rounded-lg bg-blue-500/10 border border-blue-500/30 text-white text-sm font-medium hover:bg-blue-500/20 transition-all"
+                        >
+                          {item}
                         </span>
                       ))}
                     </div>
