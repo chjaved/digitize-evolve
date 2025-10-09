@@ -93,7 +93,7 @@ const HeroSection = () => {
             </div>
 
             {/* Trust Indicators */}
-            <div className="pt-8 md:pt-12 animate-fade-in mb-16 md:mb-24">
+            <div className="pt-8 md:pt-12 animate-fade-in mb-24 md:mb-32 pb-8 md:pb-12">
               <p className="text-sm text-gray-300 mb-6">
                 Trusted by 100+ companies worldwide
               </p>
