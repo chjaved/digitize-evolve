@@ -39,24 +39,24 @@ const HeroSection = () => {
 
               {/* Feature Badges */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <div className="flex items-center gap-3 px-5 py-3 rounded-full bg-blue-500/10 border border-blue-500/30 backdrop-blur-sm">
-                  <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center">
-                    <Code2 className="w-5 h-5 text-blue-400" />
+                <div className="flex items-center gap-3 px-5 py-3 rounded-full bg-blue-500/10 border border-blue-500/30 backdrop-blur-sm shadow-[0_0_20px_rgba(59,130,246,0.2)] hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-shadow">
+                  <div className="w-10 h-10 rounded-full bg-blue-500/30 flex items-center justify-center shadow-[0_0_15px_rgba(59,130,246,0.4)]">
+                    <Code2 className="w-5 h-5 text-blue-400 drop-shadow-[0_0_5px_rgba(96,165,250,0.8)]" />
                   </div>
                   <span className="text-white font-medium">Custom Development</span>
                 </div>
                 
-                <div className="flex items-center gap-3 px-5 py-3 rounded-full bg-blue-500/10 border border-blue-500/30 backdrop-blur-sm">
-                  <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center">
-                    <Zap className="w-5 h-5 text-blue-400" />
+                <div className="flex items-center gap-3 px-5 py-3 rounded-full bg-blue-500/10 border border-blue-500/30 backdrop-blur-sm shadow-[0_0_20px_rgba(59,130,246,0.2)] hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-shadow">
+                  <div className="w-10 h-10 rounded-full bg-blue-500/30 flex items-center justify-center shadow-[0_0_15px_rgba(59,130,246,0.4)]">
+                    <Zap className="w-5 h-5 text-blue-400 drop-shadow-[0_0_5px_rgba(96,165,250,0.8)]" />
                   </div>
                   <span className="text-white font-medium">AI Integration</span>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 px-5 py-3 rounded-full bg-blue-500/10 border border-blue-500/30 backdrop-blur-sm w-fit">
-                <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center">
-                  <Shield className="w-5 h-5 text-blue-400" />
+              <div className="flex items-center gap-3 px-5 py-3 rounded-full bg-blue-500/10 border border-blue-500/30 backdrop-blur-sm w-fit shadow-[0_0_20px_rgba(59,130,246,0.2)] hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-shadow">
+                <div className="w-10 h-10 rounded-full bg-blue-500/30 flex items-center justify-center shadow-[0_0_15px_rgba(59,130,246,0.4)]">
+                  <Shield className="w-5 h-5 text-blue-400 drop-shadow-[0_0_5px_rgba(96,165,250,0.8)]" />
                 </div>
                 <span className="text-white font-medium">Enterprise Security</span>
               </div>
@@ -65,20 +65,25 @@ const HeroSection = () => {
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button 
                   size="lg"
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-xl shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all"
+                  className="relative bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-xl shadow-[0_0_30px_rgba(59,130,246,0.5)] hover:shadow-[0_0_40px_rgba(59,130,246,0.7)] transition-all overflow-hidden group"
                   onClick={() => window.open('https://calendly.com/your-calendly-link', '_blank')}
                 >
-                  Book Free Consultation
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  <span className="relative flex items-center">
+                    Book Free Consultation
+                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </span>
                 </Button>
                 
                 <Button 
                   size="lg"
                   variant="outline"
-                  className="border-2 border-gray-600 hover:border-gray-500 text-white px-8 py-6 text-lg rounded-xl bg-transparent hover:bg-white/5 transition-all"
+                  className="border-2 border-blue-500/50 hover:border-blue-500 text-white px-8 py-6 text-lg rounded-xl bg-transparent hover:bg-blue-500/10 shadow-[0_0_20px_rgba(59,130,246,0.2)] hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-all group"
                 >
-                  Get a Quote
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <span className="flex items-center">
+                    Get a Quote
+                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </span>
                 </Button>
               </div>
 
@@ -86,37 +91,49 @@ const HeroSection = () => {
 
             {/* Right Column - Stats & Tech Card */}
             <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <div className="relative rounded-3xl border border-blue-500/20 bg-gradient-to-br from-blue-950/40 to-blue-900/20 backdrop-blur-xl p-8 shadow-2xl">
+              <div className="relative rounded-3xl border border-blue-500/30 bg-gradient-to-br from-blue-950/50 to-blue-900/30 backdrop-blur-xl p-8 shadow-[0_0_60px_rgba(59,130,246,0.3)]">
+                
+                {/* Ambient Glow Effect */}
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-500/10 to-cyan-500/10 blur-2xl -z-10"></div>
                 
                 {/* Stats Grid */}
                 <div className="grid grid-cols-2 gap-6 mb-8">
-                  <div className="bg-[#1e2942] rounded-2xl p-6 border border-blue-500/10">
-                    <div className="text-4xl font-bold text-cyan-400 mb-2">100+</div>
-                    <div className="text-gray-400 text-sm">Projects Delivered</div>
+                  <div className="relative bg-[#1e2942] rounded-2xl p-6 border border-blue-500/20 shadow-[0_0_30px_rgba(59,130,246,0.2)] hover:shadow-[0_0_40px_rgba(59,130,246,0.4)] transition-shadow">
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/5 to-transparent"></div>
+                    <div className="relative">
+                      <div className="text-4xl font-bold text-cyan-400 mb-2 drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]">100+</div>
+                      <div className="text-gray-400 text-sm">Projects Delivered</div>
+                    </div>
                   </div>
                   
-                  <div className="bg-[#1e2942] rounded-2xl p-6 border border-blue-500/10">
-                    <div className="text-4xl font-bold text-cyan-400 mb-2">50+</div>
-                    <div className="text-gray-400 text-sm">Happy Clients</div>
+                  <div className="relative bg-[#1e2942] rounded-2xl p-6 border border-blue-500/20 shadow-[0_0_30px_rgba(59,130,246,0.2)] hover:shadow-[0_0_40px_rgba(59,130,246,0.4)] transition-shadow">
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-500/5 to-transparent"></div>
+                    <div className="relative">
+                      <div className="text-4xl font-bold text-cyan-400 mb-2 drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]">50+</div>
+                      <div className="text-gray-400 text-sm">Happy Clients</div>
+                    </div>
                   </div>
                 </div>
 
                 {/* Technologies Section */}
-                <div className="bg-[#1e2942] rounded-2xl p-6 border border-blue-500/10">
-                  <h3 className="text-white font-bold text-lg mb-4">Technologies We Master</h3>
-                  
-                  <div className="flex flex-wrap gap-3">
-                    {["React", "Node.js", "Python", "AI/ML", "Cloud"].map((tech) => (
-                      <span 
-                        key={tech}
-                        className="px-4 py-2 rounded-lg bg-blue-500/10 border border-blue-500/30 text-white text-sm font-medium hover:bg-blue-500/20 transition-colors"
-                      >
-                        {tech}
+                <div className="relative bg-[#1e2942] rounded-2xl p-6 border border-blue-500/20 shadow-[0_0_30px_rgba(59,130,246,0.2)]">
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/5 to-transparent"></div>
+                  <div className="relative">
+                    <h3 className="text-white font-bold text-lg mb-4">Technologies We Master</h3>
+                    
+                    <div className="flex flex-wrap gap-3">
+                      {["React", "Node.js", "Python", "AI/ML", "Cloud"].map((tech) => (
+                        <span 
+                          key={tech}
+                          className="px-4 py-2 rounded-lg bg-blue-500/10 border border-blue-500/30 text-white text-sm font-medium hover:bg-blue-500/20 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] transition-all"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                      <span className="px-4 py-2 rounded-lg bg-blue-500/10 border border-blue-500/30 text-white text-sm font-medium hover:bg-blue-500/20 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] transition-all">
+                        Blockchain
                       </span>
-                    ))}
-                    <span className="px-4 py-2 rounded-lg bg-blue-500/10 border border-blue-500/30 text-white text-sm font-medium hover:bg-blue-500/20 transition-colors">
-                      Blockchain
-                    </span>
+                    </div>
                   </div>
                 </div>
 
