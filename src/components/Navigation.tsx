@@ -60,7 +60,7 @@ const Navigation = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-sm font-medium text-gray-800 hover:text-blue-700 transition-smooth relative group"
+                className="text-base font-medium text-gray-800 hover:text-blue-700 transition-smooth relative group"
               >
                 {item.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-700 transition-all group-hover:w-full"></span>
@@ -79,7 +79,7 @@ const Navigation = () => {
                 className="text-gray-600 hover:text-blue-700 transition-colors"
                 aria-label={social.label}
               >
-                <social.icon className="w-5 h-5" />
+                <social.icon className="w-6 h-6" />
               </a>
             ))}
           </div>
@@ -107,7 +107,7 @@ const Navigation = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="block px-4 py-2 text-sm font-medium text-gray-800 hover:text-blue-700 hover:bg-gray-100 rounded-lg transition-smooth"
+                  className="block px-4 py-2 text-base font-medium text-gray-800 hover:text-blue-700 hover:bg-gray-100 rounded-lg transition-smooth"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.label}
