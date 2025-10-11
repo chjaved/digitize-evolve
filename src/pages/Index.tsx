@@ -1,40 +1,28 @@
+import { lazy, Suspense } from "react";
 import HeroSection from "@/components/HeroSection";
-import ServicesSection from "@/components/ServicesSection";
-import AboutSection from "@/components/AboutSection";
-import PricingSection from "@/components/PricingSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
 import WhatsAppChat from "@/components/WhatsAppChat";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { AnimatedSection } from "@/hooks/useScrollAnimation";
+
+// Lazy load below-the-fold components
+const ServicesSection = lazy(() => import("@/components/ServicesSection"));
+const AboutSection = lazy(() => import("@/components/AboutSection"));
+const PricingSection = lazy(() => import("@/components/PricingSection"));
+const TestimonialsSection = lazy(() => import("@/components/TestimonialsSection"));
 
 const Index = () => {
   return (
     <main className="relative">
       <HeroSection />
       
-      {/* Services Preview */}
-      <AnimatedSection animation="fade-up" delay={100}>
+      {/* Lazy load below-the-fold content */}
+      <Suspense fallback={<div className="min-h-screen" />}>
         <ServicesSection />
-      </AnimatedSection>
-      
-      {/* About Preview */}
-      <AnimatedSection animation="slide-left" delay={200}>
         <AboutSection />
-      </AnimatedSection>
-      
-      {/* Pricing Section */}
-      <AnimatedSection animation="scale-in" delay={100}>
         <PricingSection />
-      </AnimatedSection>
-      
-      {/* Testimonials Section */}
-      <AnimatedSection animation="slide-right" delay={200}>
         <TestimonialsSection />
-      </AnimatedSection>
-      
-      {/* CTA Section */}
-      <AnimatedSection animation="fade-up" delay={300}>
+        
+        {/* CTA Section */}
         <section className="py-24 px-6 max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6">
             Ready to Transform Your Business?
@@ -57,7 +45,7 @@ const Index = () => {
             </Button>
           </div>
         </section>
-      </AnimatedSection>
+      </Suspense>
       
       <WhatsAppChat />
     </main>

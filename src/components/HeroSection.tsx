@@ -9,7 +9,7 @@ import {
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#0f1729] via-[#1a2332] to-[#0f1729]">
-      <div className="relative min-h-screen flex items-center justify-center overflow-hidden w-full">
+      <div className="relative min-h-screen flex items-center justify-center w-full">
         
         {/* Main Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
@@ -36,16 +36,16 @@ const HeroSection = () => {
 
               {/* Feature Badges */}
               <div className="flex flex-wrap gap-3">
-                {[
+                 {[
                   { icon: <Code2 className="w-4 h-4 text-blue-400" />, text: "Custom Development" },
                   { icon: <Zap className="w-4 h-4 text-blue-400" />, text: "AI Integration" },
                   { icon: <Shield className="w-4 h-4 text-blue-400" />, text: "Enterprise Security" },
                 ].map((item, i) => (
                   <div
                     key={i}
-                    className="flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/30 backdrop-blur-sm shadow-[0_0_20px_rgba(59,130,246,0.2)] hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-shadow"
+                    className="flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/30 backdrop-blur-sm"
                   >
-                    <div className="w-8 h-8 rounded-full bg-blue-500/30 flex items-center justify-center shadow-[0_0_15px_rgba(59,130,246,0.4)]">
+                    <div className="w-8 h-8 rounded-full bg-blue-500/30 flex items-center justify-center">
                       {item.icon}
                     </div>
                     <span className="text-white font-medium text-sm">{item.text}</span>
@@ -57,10 +57,9 @@ const HeroSection = () => {
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button 
                   size="lg"
-                  className="relative bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-xl shadow-[0_0_30px_rgba(59,130,246,0.5)] hover:shadow-[0_0_40px_rgba(59,130,246,0.7)] transition-all overflow-hidden group"
+                  className="relative bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-xl transition-colors overflow-hidden group"
                   onClick={() => window.open('https://calendly.com/your-calendly-link', '_blank')}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   <span className="relative flex items-center">
                     Book Free Consultation
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -70,7 +69,7 @@ const HeroSection = () => {
                 <Button 
                   size="lg"
                   variant="outline"
-                  className="border-2 border-blue-500/50 hover:border-blue-500 text-white px-8 py-6 text-lg rounded-xl bg-transparent hover:bg-blue-500/10 shadow-[0_0_20px_rgba(59,130,246,0.2)] hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-all group"
+                  className="border-2 border-blue-500/50 hover:border-blue-500 text-white px-8 py-6 text-lg rounded-xl bg-transparent hover:bg-blue-500/10 transition-colors group"
                 >
                   <span className="flex items-center">
                     Get a Quote
@@ -82,19 +81,16 @@ const HeroSection = () => {
 
             {/* Right Column - Updated Card */}
             <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <div className="relative rounded-3xl border border-blue-500/30 bg-gradient-to-br from-blue-950/50 to-blue-900/30 backdrop-blur-xl p-10 min-h-[550px] shadow-[0_0_60px_rgba(59,130,246,0.3)] flex flex-col justify-between">
-                
-                {/* Glow */}
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-500/10 to-cyan-500/10 blur-2xl -z-10"></div>
+              <div className="relative rounded-3xl border border-blue-500/30 bg-gradient-to-br from-blue-950/50 to-blue-900/30 backdrop-blur-xl p-10 min-h-[550px] flex flex-col justify-between">
                 
                 {/* Stats */}
                 <div>
                   <div className="grid grid-cols-2 gap-6 mb-8">
-                    <div className="relative bg-[#1e2942] rounded-2xl p-6 border border-blue-500/20 shadow-[0_0_30px_rgba(59,130,246,0.2)]">
+                    <div className="relative bg-[#1e2942] rounded-2xl p-6 border border-blue-500/20">
                       <div className="text-4xl font-bold text-cyan-400 mb-2">100+</div>
                       <div className="text-gray-400 text-sm">Projects Delivered</div>
                     </div>
-                    <div className="relative bg-[#1e2942] rounded-2xl p-6 border border-blue-500/20 shadow-[0_0_30px_rgba(59,130,246,0.2)]">
+                    <div className="relative bg-[#1e2942] rounded-2xl p-6 border border-blue-500/20">
                       <div className="text-4xl font-bold text-cyan-400 mb-2">50+</div>
                       <div className="text-gray-400 text-sm">Happy Clients</div>
                     </div>
