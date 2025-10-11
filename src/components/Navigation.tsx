@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
-import { Menu, X, Facebook, Twitter, Instagram, Linkedin, Youtube } from "lucide-react";
+import { Menu, X, Facebook, Instagram, Linkedin } from "lucide-react";
 import bitworkLogo from "@/assets/bitwork-logo.png";
 
 const Navigation = () => {
@@ -29,11 +29,9 @@ const Navigation = () => {
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: "https://facebook.com/yourpage", label: "Facebook" },
-    { icon: Twitter, href: "https://twitter.com/yourhandle", label: "Twitter" },
-    { icon: Instagram, href: "https://instagram.com/yourhandle", label: "Instagram" },
-    { icon: Linkedin, href: "https://linkedin.com/company/yourcompany", label: "LinkedIn" },
-    { icon: Youtube, href: "https://youtube.com/@yourchannel", label: "YouTube" }
+    { icon: Facebook, href: "https://www.facebook.com/bitworkpvtltd/", label: "Facebook" },
+    { icon: Linkedin, href: "https://www.linkedin.com/company/bitworkpvtltd/", label: "LinkedIn" },
+    { icon: Instagram, href: "https://www.instagram.com/bitwork_pvt_ltd/", label: "Instagram" }
   ];
 
   return (

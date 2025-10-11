@@ -3,9 +3,9 @@ import {
   Mail, 
   Phone, 
   MapPin, 
+  Facebook,
   Linkedin, 
   Instagram,
-  MessageCircle,
   ArrowRight
 } from "lucide-react";
 import bitworkLogo from "@/assets/bitwork-logo.png";
@@ -55,9 +55,9 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Linkedin, href: "https://www.linkedin.com/in/javed-jabbar/", label: "LinkedIn" },
-    { icon: MessageCircle, href: "https://wa.link/b6qqva", label: "WhatsApp" },
-    { icon: Instagram, href: "https://www.instagram.com/code._.architects?igsh=OHY4NG5xd2JpdTEy", label: "Instagram" }
+    { icon: Facebook, href: "https://www.facebook.com/bitworkpvtltd/", label: "Facebook" },
+    { icon: Linkedin, href: "https://www.linkedin.com/company/bitworkpvtltd/", label: "LinkedIn" },
+    { icon: Instagram, href: "https://www.instagram.com/bitwork_pvt_ltd/", label: "Instagram" }
   ];
 
   return (
