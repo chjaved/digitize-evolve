@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Facebook, Twitter, Instagram, Linkedin, Youtube } from "lucide-react";
 import bitworkLogo from "@/assets/bitwork-logo.png";
 
 const Navigation = () => {
@@ -26,6 +26,14 @@ const Navigation = () => {
     { label: "Blog", href: "/blog" },
     { label: "Contact", href: "/contact" },
     { label: "FAQ", href: "/faq" }
+  ];
+
+  const socialLinks = [
+    { icon: Facebook, href: "https://facebook.com/yourpage", label: "Facebook" },
+    { icon: Twitter, href: "https://twitter.com/yourhandle", label: "Twitter" },
+    { icon: Instagram, href: "https://instagram.com/yourhandle", label: "Instagram" },
+    { icon: Linkedin, href: "https://linkedin.com/company/yourcompany", label: "LinkedIn" },
+    { icon: Youtube, href: "https://youtube.com/@yourchannel", label: "YouTube" }
   ];
 
   return (
@@ -62,8 +70,25 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Desktop CTA */}
-          <div className="hidden md:flex items-center gap-4">
+          {/* Desktop Social + CTA */}
+          <div className="hidden md:flex items-center gap-6">
+            {/* Social Links */}
+            <div className="flex items-center gap-3">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-blue-700 transition-colors"
+                  aria-label={social.label}
+                >
+                  <social.icon className="w-5 h-5" />
+                </a>
+              ))}
+            </div>
+            
+            {/* CTA Button */}
             <Button
               className="bg-blue-800 hover:bg-blue-900 text-white border-0"
               size="sm"
@@ -104,7 +129,7 @@ const Navigation = () => {
                   {item.label}
                 </a>
               ))}
-              <div className="flex flex-col gap-3 px-4 pt-4 border-t border-gray-200/50">
+              <div className="flex flex-col gap-4 px-4 pt-4 border-t border-gray-200/50">
                 <Button
                   className="bg-blue-800 hover:bg-blue-900 text-white border-0"
                   size="sm"
@@ -114,6 +139,22 @@ const Navigation = () => {
                 >
                   Get Started
                 </Button>
+                
+                {/* Mobile Social Links */}
+                <div className="flex items-center justify-center gap-6 pt-2">
+                  {socialLinks.map((social) => (
+                    <a
+                      key={social.label}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-600 hover:text-blue-700 transition-colors"
+                      aria-label={social.label}
+                    >
+                      <social.icon className="w-6 h-6" />
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
